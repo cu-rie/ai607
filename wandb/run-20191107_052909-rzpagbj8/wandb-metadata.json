@@ -1,0 +1,24 @@
+{
+    "root": "C:/Users/kyuree/dev/ai601",
+    "program": "C:/Users/kyuree/dev/ai601/train.py",
+    "git": {
+        "remote": "https://github.com/cu-rie/ai607.git",
+        "commit": "4e6aa86235f21c26dd8cb21c2ae3981cb73f5add"
+    },
+    "email": "ahnkjuree@gmail.com",
+    "startedAt": "2019-11-07T05:29:09.533659",
+    "host": "DESKTOP-AL6I7CR",
+    "username": "kyuree",
+    "executable": "C:\\Users\\kyuree\\Anaconda3\\envs\\ai601_env\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.5",
+    "cpu_count": 4,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "name": "GCN_cora",
+    "project": "ai607",
+    "heartbeatAt": "2019-11-07T05:29:26.748567",
+    "exitcode": 0
+}

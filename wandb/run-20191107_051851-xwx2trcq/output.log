@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:/Users/kyuree/dev/ai601/train.py", line 65, in <module>
+    logits = model(graph, features)
+  File "C:\Users\kyuree\Anaconda3\envs\ai601_env\lib\site-packages\torch\nn\modules\module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\kyuree\dev\ai601\models\GCN.py", line 31, in forward
+    h = layer(graph, h)
+  File "C:\Users\kyuree\Anaconda3\envs\ai601_env\lib\site-packages\torch\nn\modules\module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\kyuree\dev\ai601\models\graphconv.py", line 108, in forward
+    graph = graph.local_var()
+AttributeError: 'DiGraph' object has no attribute 'local_var'
