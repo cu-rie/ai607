@@ -13,6 +13,7 @@ if __name__ == "__main__":
     import wandb
     import dgl
 
+    exp_name = 'GCN_citeceer'
     data = load_citeseer()
 
     graph = dgl.DGLGraph(data.graph)
@@ -42,7 +43,7 @@ if __name__ == "__main__":
 
     dur = []
 
-    wandb.init(project='ai607', name="GCN_cora")
+    wandb.init(project='kaistai607', name=exp_name)
     wandb.watch(model)
 
     n_edges = graph.number_of_edges()
@@ -63,9 +64,14 @@ if __name__ == "__main__":
             dur.append(time.time() - t0)
 
         acc = evaluate(model, graph, features, labels, val_mask)
-        print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Accuracy {:.4f} | "
-              "ETputs(KTEPS) {:.2f}".format(epoch, np.mean(dur), loss.item(), acc, n_edges / np.mean(dur) / 1000))
+        wandb.log({'epoch': epoch,
+                   'time': np.mean(dur),
+                   'loss': loss.item(),
+                   'acc': acc,
 
-    print()
+                   })
+
     acc = evaluate(model, graph, features, labels, test_mask)
-    print("Test Accuracy {:.4f}".format(acc))
+    wandb.log({'test_acc': acc
+
+               })

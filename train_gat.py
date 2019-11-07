@@ -1,4 +1,4 @@
-# import wandb
+import wandb
 import dgl
 import networkx as nx
 from dgl.data.citation_graph import load_citeseer
@@ -9,6 +9,7 @@ from models.GAT import GAT
 import numpy as np
 
 if __name__ == "__main__":
+    exp_name = "GAT_citeseer"
 
     data = load_citeseer()
 
@@ -43,8 +44,8 @@ if __name__ == "__main__":
 
     dur = []
 
-    # wandb.init(project='ai607', name="GCN_cora")
-    # wandb.watch(model)
+    wandb.init(project='kaistai607', name=exp_name)
+    wandb.watch(model)
 
     n_edges = graph.number_of_edges()
 
@@ -64,9 +65,14 @@ if __name__ == "__main__":
             dur.append(time.time() - t0)
 
         acc = evaluate(model, graph, features, labels, val_mask)
-        print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | Accuracy {:.4f} | "
-              "ETputs(KTEPS) {:.2f}".format(epoch, np.mean(dur), loss.item(), acc, n_edges / np.mean(dur) / 1000))
+        wandb.log({'epoch': epoch,
+                   'time': np.mean(dur),
+                   'loss': loss.item(),
+                   'acc': acc,
 
-    print()
+                   })
+
     acc = evaluate(model, graph, features, labels, test_mask)
-    print("Test Accuracy {:.4f}".format(acc))
+    wandb.log({'test_acc': acc
+
+               })

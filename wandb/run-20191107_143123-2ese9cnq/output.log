@@ -1,0 +1,4 @@
+C:\Users\kyuree\Anaconda3\envs\ai601_env\lib\site-packages\numpy\core\fromnumeric.py:3257: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+C:\Users\kyuree\Anaconda3\envs\ai601_env\lib\site-packages\numpy\core\_methods.py:161: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)

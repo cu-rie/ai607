@@ -1,0 +1,24 @@
+{
+    "root": "C:/Users/kyuree/dev/ai601",
+    "program": "C:/Users/kyuree/dev/ai601/train_gcn.py",
+    "git": {
+        "remote": "https://github.com/cu-rie/ai607.git",
+        "commit": "1e6b4de68a0d8930112c1bdebcbd8bfad4f9b8a7"
+    },
+    "email": "ahnkjuree@gmail.com",
+    "startedAt": "2019-11-07T14:21:07.647061",
+    "host": "DESKTOP-AL6I7CR",
+    "username": "kyuree",
+    "executable": "C:\\Users\\kyuree\\Anaconda3\\envs\\ai601_env\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.5",
+    "cpu_count": 4,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "name": "GCN_citeceer",
+    "project": "ai607",
+    "heartbeatAt": "2019-11-07T14:21:34.985798",
+    "exitcode": 0
+}
