@@ -1,33 +1,23 @@
+# import wandb
+import dgl
+import networkx as nx
+from dgl.data.citation_graph import load_citeseer
+import time
 import torch
-import argparse, time
+from utils.train_utils import evaluate
+from models.GAT import GAT
 import numpy as np
 
-from models.GCN import GCN
-from models.GAT import GAT
-
-# from utils.load_data import load_cora_data
-from dgl.data import load_data, register_data_args
-from dgl.data.citation_graph import load_cora, load_citeseer, load_pubmed, load_synthetic
-
-
-def evaluate(model, graph, features, labels, mask):
-    model.eval()
-    with torch.no_grad():
-        logits = model(graph, features)
-        logits = logits[mask]
-        labels = labels[mask]
-        _, indices = torch.max(logits, dim=1)
-        correct = torch.sum(indices == labels)
-        return correct.item() * 1.0 / len(labels)
-
-
 if __name__ == "__main__":
-    import wandb
-    import dgl
 
-    data = load_cora()
+    data = load_citeseer()
 
-    graph = dgl.DGLGraph(data.graph)
+    g = data.graph
+    g.remove_edges_from(nx.selfloop_edges(g))
+
+    graph = dgl.DGLGraph(g)
+    graph.add_edges(graph.nodes(), graph.nodes())
+
     features = torch.Tensor(data.features)
     train_mask = torch.LongTensor(data.train_mask)
     test_mask = torch.LongTensor(data.test_mask)
@@ -37,11 +27,11 @@ if __name__ == "__main__":
 
     # model arguments
 
-    input_dim = features.shape[-1]
+    input_dim = features.shape[1]
     n_hidden = 64
     n_layers = 3
 
-    model = GCN(input_dim, n_hidden, num_labels, n_layers)
+    model = GAT(input_dim=input_dim, num_hidden=n_hidden, num_classes=num_labels, num_layers=n_layers)
 
     # train arguments
 
@@ -53,8 +43,8 @@ if __name__ == "__main__":
 
     dur = []
 
-    wandb.init(project='ai607', name="GCN_cora")
-    wandb.watch(model)
+    # wandb.init(project='ai607', name="GCN_cora")
+    # wandb.watch(model)
 
     n_edges = graph.number_of_edges()
 

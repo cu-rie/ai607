@@ -1,0 +1,7 @@
+C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\ATen/native/IndexingUtils.h:20: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+Traceback (most recent call last):
+  File "C:/Users/kyuree/dev/ai601/models/GAT.py", line 103, in <module>
+    acc = evaluate(model, graph, features, labels, val_mask)
+NameError: name 'evaluate' is not defined
