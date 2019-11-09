@@ -10,7 +10,7 @@ class GCN(nn.Module):
                  n_classes,
                  n_layers,
                  activation=torch.relu,
-                 dropout=0.5):
+                 dropout=0.):
         super(GCN, self).__init__()
         self.layers = nn.ModuleList()
         # input layer

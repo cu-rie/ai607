@@ -7,55 +7,6 @@ import dgl.function as fn
 
 
 class GraphConv(nn.Module):
-    r"""Apply graph convolution over an input signal.
-
-    Graph convolution is introduced in `GCN <https://arxiv.org/abs/1609.02907>`__
-    and can be described as below:
-
-    .. math::
-      h_i^{(l+1)} = \sigma(b^{(l)} + \sum_{j\in\mathcal{N}(i)}\frac{1}{c_{ij}}h_j^{(l)}W^{(l)})
-
-    where :math:`\mathcal{N}(i)` is the neighbor set of node :math:`i`. :math:`c_{ij}` is equal
-    to the product of the square root of node degrees:
-    :math:`\sqrt{|\mathcal{N}(i)|}\sqrt{|\mathcal{N}(j)|}`. :math:`\sigma` is an activation
-    function.
-
-    The model parameters are initialized as in the
-    `original implementation <https://github.com/tkipf/gcn/blob/master/gcn/layers.py>`__ where
-    the weight :math:`W^{(l)}` is initialized using Glorot uniform initialization
-    and the bias is initialized to be zero.
-
-    Notes
-    -----
-    Zero in degree nodes could lead to invalid normalizer. A common practice
-    to avoid this is to add a self-loop for each node in the graph, which
-    can be achieved by:
-
-    >>> g = ... # some DGLGraph
-    >>> g.add_edges(g.nodes(), g.nodes())
-
-
-    Parameters
-    ----------
-    in_feats : int
-        Input feature size.
-    out_feats : int
-        Output feature size.
-    norm : bool, optional
-        If True, the normalizer :math:`c_{ij}` is applied. Default: ``True``.
-    bias : bool, optional
-        If True, adds a learnable bias to the output. Default: ``True``.
-    activation: callable activation function/layer or None, optional
-        If not None, applies an activation function to the updated node features.
-        Default: ``None``.
-
-    Attributes
-    ----------
-    weight : torch.Tensor
-        The learnable weight tensor.
-    bias : torch.Tensor
-        The learnable bias tensor.
-    """
 
     def __init__(self,
                  in_feats,
@@ -78,33 +29,11 @@ class GraphConv(nn.Module):
         self._activation = activation
 
     def reset_parameters(self):
-        """Reinitialize learnable parameters."""
         init.xavier_uniform_(self.weight)
         if self.bias is not None:
             init.zeros_(self.bias)
 
     def forward(self, graph, feat):
-        r"""Compute graph convolution.
-
-        Notes
-        -----
-        * Input shape: :math:`(N, *, \text{in_feats})` where * means any number of additional
-          dimensions, :math:`N` is the number of nodes.
-        * Output shape: :math:`(N, *, \text{out_feats})` where all but the last dimension are
-          the same shape as the input.
-
-        Parameters
-        ----------
-        graph : DGLGraph
-            The graph.
-        feat : torch.Tensor
-            The input feature
-
-        Returns
-        -------
-        torch.Tensor
-            The output feature
-        """
         graph.ndata['h'] = feat
         if self._norm:
             norm = th.pow(graph.in_degrees().float().clamp(min=1), -0.5)
@@ -138,12 +67,3 @@ class GraphConv(nn.Module):
 
         return rst
 
-    def extra_repr(self):
-        """Set the extra representation of the module,
-        which will come into effect when printing the model.
-        """
-        summary = 'in={_in_feats}, out={_out_feats}'
-        summary += ', normalization={_norm}'
-        if '_activation' in self.__dict__:
-            summary += ', activation={_activation}'
-        return summary.format(**self.__dict__)

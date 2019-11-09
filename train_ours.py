@@ -2,9 +2,8 @@ import torch
 import argparse, time
 import numpy as np
 
-from models.GCN import GCN
+from models.Ours import OurNetwork
 from utils.train_utils import evaluate
-from models.GAT import GAT
 
 from dgl.data import load_data, register_data_args
 from dgl.data.citation_graph import load_cora, load_citeseer, load_pubmed, load_synthetic
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     import wandb
     import dgl
 
-    exp_name = 'GCN_citeceer'
+    exp_name = 'Ours_citeseer'
     data = load_citeseer()
 
     graph = dgl.DGLGraph(data.graph)
@@ -30,8 +29,7 @@ if __name__ == "__main__":
     n_hidden = 64
     n_layers = 3
 
-    model = GCN(input_dim, n_hidden, num_labels, n_layers)
-    # model = GAT(input_dim, n_hidden, num_labels, n_layers, heads=3)
+    model = OurNetwork(input_dim, n_hidden, num_labels, n_layers, n_nodes=graph.number_of_nodes())
 
     # train arguments
 
