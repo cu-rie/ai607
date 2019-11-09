@@ -1,19 +1,421 @@
-2019-11-09 16:57:49,927 DEBUG   MainThread:17968 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
-2019-11-09 16:57:49,957 DEBUG   MainThread:17968 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-2019-11-09 16:57:49,961 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
-2019-11-09 16:57:50,021 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-09 16:57:50,081 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-09 16:57:50,157 DEBUG   MainThread:17968 [run_manager.py:__init__():535] Initialized sync for kaistai607/wkzqv22m
-2019-11-09 16:57:50,162 INFO    MainThread:17968 [run_manager.py:wrap_existing_process():1131] wrapping existing process 12900
-2019-11-09 16:57:50,165 DEBUG   MainThread:17968 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
-2019-11-09 16:57:50,745 DEBUG   MainThread:17968 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
-2019-11-09 16:57:50,936 INFO    Thread-7  :17968 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_075748-wkzqv22m\wandb-metadata.json
-2019-11-09 16:57:51,034 INFO    MainThread:17968 [run_manager.py:init_run():916] system metrics and metadata threads started
-2019-11-09 16:57:51,034 INFO    MainThread:17968 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
-2019-11-09 16:57:51,045 DEBUG   Thread-20 :17968 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-09 16:57:51,435 DEBUG   Thread-20 :17968 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
-2019-11-09 16:57:51,451 INFO    Thread-20 :17968 [run_manager.py:_upsert_run():1035] saving patches
-2019-11-09 16:57:51,452 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-09 16:57:51,542 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-09 16:57:51,606 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-09 16:57:51,701 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:32,745 DEBUG   MainThread:17440 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+2019-11-09 17:03:32,779 DEBUG   MainThread:17440 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+2019-11-09 17:03:32,782 DEBUG   MainThread:17440 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
+2019-11-09 17:03:32,863 DEBUG   MainThread:17440 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:32,962 DEBUG   MainThread:17440 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:33,055 DEBUG   MainThread:17440 [run_manager.py:__init__():535] Initialized sync for gnnproject/a64usb8e
+2019-11-09 17:03:33,060 INFO    MainThread:17440 [run_manager.py:wrap_existing_process():1131] wrapping existing process 6148
+2019-11-09 17:03:33,064 DEBUG   MainThread:17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2019-11-09 17:03:33,645 DEBUG   MainThread:17440 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
+2019-11-09 17:03:33,754 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:03:33,932 INFO    MainThread:17440 [run_manager.py:init_run():916] system metrics and metadata threads started
+2019-11-09 17:03:33,936 INFO    MainThread:17440 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
+2019-11-09 17:03:33,945 DEBUG   Thread-20 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:34,359 DEBUG   Thread-20 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
+2019-11-09 17:03:34,366 INFO    Thread-20 :17440 [run_manager.py:_upsert_run():1035] saving patches
+2019-11-09 17:03:34,366 DEBUG   Thread-20 :17440 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:34,428 DEBUG   Thread-20 :17440 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:34,490 DEBUG   Thread-20 :17440 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:34,589 DEBUG   Thread-20 :17440 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:34,770 DEBUG   Thread-20 :17440 [cmd.py:execute():724] Popen(['git', 'merge-base', 'HEAD', '88f9ffc3f5a5ab75d841ff47a6cb401246c24ef9'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 17:03:34,839 INFO    Thread-20 :17440 [run_manager.py:_upsert_run():1039] saving pip packages
+2019-11-09 17:03:34,841 INFO    Thread-20 :17440 [run_manager.py:_upsert_run():1041] initializing streaming files api
+2019-11-09 17:03:34,841 INFO    Thread-20 :17440 [run_manager.py:_upsert_run():1048] unblocking file change observer, beginning sync with W&B servers
+2019-11-09 17:03:34,842 INFO    MainThread:17440 [run_manager.py:wrap_existing_process():1148] informing user process we are ready to proceed
+2019-11-09 17:03:34,843 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\output.log
+2019-11-09 17:03:34,844 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\diff.patch
+2019-11-09 17:03:34,847 INFO    MainThread:17440 [run_manager.py:_sync_etc():1255] entering loop for messages from user process
+2019-11-09 17:03:34,847 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:35,204 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:03:35,757 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\diff.patch
+2019-11-09 17:03:35,758 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\config.yaml
+2019-11-09 17:03:35,773 DEBUG   Thread-7  :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:35,784 DEBUG   Thread-32 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:35,907 DEBUG   Thread-33 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:36,144 DEBUG   Thread-32 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 764
+2019-11-09 17:03:36,148 DEBUG   Thread-32 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:03:36,161 DEBUG   Thread-7  :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
+2019-11-09 17:03:36,166 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\output.log
+2019-11-09 17:03:36,167 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:36,176 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\requirements.txt
+2019-11-09 17:03:36,272 DEBUG   Thread-33 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 734
+2019-11-09 17:03:36,277 DEBUG   Thread-33 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:03:36,629 DEBUG   Thread-32 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/wandb-metadata.json?Expires=1573286677&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=lK7b%2F2N8VMzoNCY2qRhq4IaV2PEceDrpkCmMIHoaYmwtRlY6r7%2F0DVGWQJEfUUEWbHHJvWsOKmM%2BNznqj8CUnNMtu51FWAf1sDPTj%2B25ocYueGPr8WaCWKkW02G7ZO%2By4nBQLKZKRkMIygsX20wPpM2RgLxdbWXdHZv2KwlOPb6TEiN2QeQn962GUOGzin2Sa3gt%2BImtT5H%2FSXHrBwKXtTGDxhxohZkNQTHw8aWTQCTAbj9%2BNC1wurP%2FZqd1fSg0OVudfJv%2BhXMn590EYSHAeeF6OCPbMlEluVimHbeItCuisxxN1u7uNYpAQbKpAIJzoi%2FlfogKHf4zzLnTDUJ48A%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:03:36,776 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:36,783 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:36,933 DEBUG   Thread-33 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/diff.patch?Expires=1573286677&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=cxvVIcn8y0lFVbshFblROfrTa%2BZopTJD6dzWaQ6nZGetNOPsXsKDeAbn1Y3LWBP0Duy7zVgTkBzTGokpaNB6NSit6kc5CqH9Cu6ji3YnP6bKc%2F6ijY8ddrBBXNn6%2BmM3KtyUmZ8VOYb52ktfSx5LHhzfGjdWHfftIvLnj9JdDHjlUZhy7wVZFY93M9wU6sZgu8o58KUlym8BqFIIw5XGyfGdj4VWBHznibqnVO%2BenjyYxD6iMKoEGbBhFYcKRLSMCWP4O1NDw1sywUaGoYzKBqN8zF%2FMXO1TKJptsKy3lL0HBdXaNUUrXoJO8lNbQHoq7j8aLUxqoni0q6mkatFKaw%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:03:37,792 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:37,793 DEBUG   Thread-13 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:37,793 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:38,194 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:38,775 DEBUG   Thread-35 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:38,804 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:38,805 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:38,863 DEBUG   Thread-36 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:39,008 DEBUG   Thread-37 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:39,158 DEBUG   Thread-35 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 757
+2019-11-09 17:03:39,163 DEBUG   Thread-35 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:03:39,221 DEBUG   Thread-36 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 758
+2019-11-09 17:03:39,227 DEBUG   Thread-36 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:03:39,382 DEBUG   Thread-37 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 760
+2019-11-09 17:03:39,387 DEBUG   Thread-37 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:03:39,702 DEBUG   Thread-36 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/config.yaml?Expires=1573286680&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=FmavJtmpiUmDXN80LAprs0WFNYq%2FS5Jk9psRTPaEdCZh1rDY3De%2FX6bqo%2Fx%2B1PRhAH8umUBYamE%2Bq4ZcACAo95vZI0yA1Crq0GwA2R7PE%2FnfHDqZRwoR70Whx%2BhxwIaNcmo8B94P0vJ%2FAy2%2B2VLVdg1KrcBuTKOLFmCu5ugtLHlrjtFUoOXqEP2921ykIRELIDcUbX8nCm%2FawV5P5tw5klZ0%2FH%2BnO0P78fYVPe%2FxUm52VAZ0sNkohOTYE%2BVGgyc%2BuyxtiL7NbxOvFUKgnZMJC4KtS5NluOq9B4HWrxJDt%2BUltqVdbYXTAQ9XWo3LEgqVbcbfEaVOX994eI4lEWXhRA%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:03:39,805 DEBUG   Thread-35 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/diff.patch?Expires=1573286680&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=c6i85viWkiBj0zm9ahDYjAJAU7BlJeoy%2FdskX1Y61azr4tdSh2MbKbzgR4zXWx3bd%2BtBkiU5mCJ7%2BDN%2FAQ8W7kv%2BV5IlnLIowfSADpAnMnZYuNbWEZ%2Bh4WDjeEAZzQb4Eb3rTXgGdmwA6Gs86e2nJS%2BLV8GzxLhX36ogaUzKBvsyIdibQ79SyqmfTUjRH8iKVp%2BAYoEZu8YZUzyKydFgfBdOF8c1z4nMB53WIp2Lt7sWQ8iFhXjCbMoiE2TC9UgiDC81BqznUDqNTiyAl6ET6tvWTReoZqd2KJxKafp0qb1d2Zn5tgD9H9xdVmSrTRNuCi0vscJCFgb00Pt50fPJPA%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:03:39,831 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:39,831 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:39,852 DEBUG   Thread-37 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/requirements.txt?Expires=1573286681&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=pH3DhFzePWtA2mu6jGJd6lMrCUoIlJTKy%2FGpSK4JNQei2QFf%2BsU4J8JkcdxU%2Buhyaq%2B3ydCXY7%2FTj3D42nkxtJz87AlUWDKxaj0SMsPfsbXDtN9mL1PNyfMETBzwf%2FTVNGPzt1Nl4l9UjahIfHGcfFO1zGuQeO%2F5Qv6U2qkfP7d4JRnHOH4mI%2FREPYJqAl0bqCv%2F%2BLzipCPe65Im84SatG5KwY1DnznPHvgvyxc4bW5WZvufAiJeGMdIPOU7wePmdkj4D8nMH%2BBuGKplHZOmlMpX42ttYXTSvvXCT8ysmzS0xlUJ8mbplPrWqsjOS5aM5YwyQ9iaeEJxRpwViFR%2B4A%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:03:40,076 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:40,844 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:40,845 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:41,869 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:41,870 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:42,155 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:42,883 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:42,884 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:43,885 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:43,885 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:44,137 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:44,889 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:44,889 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:45,907 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:45,908 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:46,168 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:46,931 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:46,931 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:47,933 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:47,933 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:48,199 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:48,935 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:48,936 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:49,937 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:49,938 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:50,192 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:50,209 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:03:50,565 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:03:51,149 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:51,150 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:03:51,150 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:52,152 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:52,152 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:52,191 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:53,153 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:53,154 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:54,158 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:54,159 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:54,194 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:55,160 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:55,160 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:56,167 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:56,168 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:56,252 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:57,183 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:57,183 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:58,186 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:58,186 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:03:58,250 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:03:59,187 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:03:59,188 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:00,188 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:00,189 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:00,248 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:01,192 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:01,192 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:02,197 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:02,198 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:02,263 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:03,207 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:03,207 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:04,214 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:04,214 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:04,264 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:05,234 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:05,235 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:05,240 INFO    Thread-7  :17440 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-events.jsonl
+2019-11-09 17:04:05,569 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:04:05,926 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:04:06,236 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:06,237 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:04:06,237 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:06,309 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:07,260 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:07,261 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:08,261 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:08,262 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:08,353 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:09,277 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:09,277 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:10,279 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:10,280 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:10,358 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:11,305 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:11,306 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:12,307 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:12,308 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:12,384 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:13,308 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:13,308 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:14,319 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:14,319 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:14,392 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:15,321 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:15,322 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:16,322 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:16,323 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:16,397 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:17,323 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:17,323 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:18,331 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:18,332 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:18,396 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:19,343 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:19,343 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:20,359 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:20,360 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:20,427 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:20,931 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:04:21,282 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:04:21,363 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:21,363 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:22,365 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:22,366 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:04:22,366 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:22,431 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:23,374 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:23,375 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:24,398 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:24,399 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:24,456 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:25,412 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:25,413 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:26,414 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:26,415 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:26,484 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:27,416 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:27,416 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:28,434 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:28,435 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:28,502 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:29,436 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:29,436 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:30,462 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:30,462 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:30,498 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:31,486 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:31,486 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:32,491 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:32,491 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:33,493 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:33,494 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:34,506 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:34,507 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:35,517 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:35,519 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:36,286 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:04:36,521 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:36,521 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:36,641 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:04:37,524 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:37,525 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-events.jsonl
+2019-11-09 17:04:37,525 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:38,552 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:38,552 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:04:38,553 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:39,563 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:39,564 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:40,577 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:40,583 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:40,584 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:41,586 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:41,587 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:42,600 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:42,601 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:43,602 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:43,602 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:44,606 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:44,607 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:45,607 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:45,607 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:46,608 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:46,609 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:47,624 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:47,625 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:48,639 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:48,639 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:49,642 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:49,642 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:50,645 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:50,646 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:50,913 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:04:51,646 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:04:51,666 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:51,666 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:52,003 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:04:52,682 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:52,682 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:53,700 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:53,701 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:54,702 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:54,703 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:04:54,703 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:55,703 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:55,703 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:56,725 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:56,725 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:57,746 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:57,746 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:58,748 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:58,749 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:04:59,756 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:04:59,757 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:00,759 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:00,759 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:00,821 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:01,801 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:01,802 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:02,803 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:02,804 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:03,817 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:03,818 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:04,818 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:04,818 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:05,821 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:05,821 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:06,824 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:06,824 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:07,007 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:05:07,367 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:05:07,845 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:07,846 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:08,848 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:08,849 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:09,849 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:09,850 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-events.jsonl
+2019-11-09 17:05:09,850 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:10,851 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:10,851 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:05:10,852 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:10,882 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:11,854 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:11,855 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:12,865 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:12,865 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:13,874 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:13,874 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:14,876 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:14,878 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:15,877 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:15,877 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:16,881 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:16,881 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:17,883 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:17,888 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:18,890 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:18,891 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:19,892 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:19,892 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:20,897 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:20,899 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:21,274 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:21,921 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:21,922 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:22,371 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:05:22,748 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:05:22,923 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:22,923 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:23,924 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:23,925 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:24,926 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:24,926 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:25,953 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:25,953 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:26,954 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:26,955 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:05:26,956 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:27,956 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:27,956 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:28,969 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:28,969 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:29,974 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:29,975 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:30,976 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:30,977 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:31,072 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:31,979 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:31,980 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:33,002 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:33,003 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:34,008 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:34,008 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:35,019 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:35,019 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:36,044 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:36,045 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:37,070 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:37,070 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:37,753 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:05:38,074 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:38,075 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:38,118 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:05:39,076 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:39,077 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:40,083 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:40,084 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:41,085 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:41,085 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:41,169 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:42,091 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:42,091 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-events.jsonl
+2019-11-09 17:05:42,091 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:43,092 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:43,092 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:05:43,094 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:44,116 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:44,117 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:45,117 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:45,117 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:46,139 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:46,139 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:47,153 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:47,154 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:48,154 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:48,155 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:49,155 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:49,155 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:50,173 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:50,173 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:51,198 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:51,198 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:51,285 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:05:52,202 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:52,202 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:53,121 DEBUG   Thread-31 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:05:53,205 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:53,205 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:53,471 DEBUG   Thread-31 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2019-11-09 17:05:54,209 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:54,210 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:55,210 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:55,211 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:56,218 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:56,219 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:57,095 INFO    MainThread:17440 [run_manager.py:_sync_etc():1278] received message from user process: {"exitcode": 0}
+2019-11-09 17:05:57,096 INFO    MainThread:17440 [run_manager.py:_sync_etc():1364] closing log streams and sending exitcode to W&B
+2019-11-09 17:05:57,096 INFO    MainThread:17440 [run_manager.py:shutdown():1055] shutting down system stats and metadata service
+2019-11-09 17:05:57,220 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-history.jsonl
+2019-11-09 17:05:57,220 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-events.jsonl
+2019-11-09 17:05:57,220 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-summary.json
+2019-11-09 17:05:57,226 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\output.log
+2019-11-09 17:05:58,020 INFO    MainThread:17440 [run_manager.py:shutdown():1067] stopping streaming files and file change observer
+2019-11-09 17:05:58,220 INFO    Thread-7  :17440 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191109_080331-a64usb8e\wandb-metadata.json
+2019-11-09 17:05:58,229 DEBUG   MainThread:17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:05:58,612 DEBUG   MainThread:17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
+2019-11-09 17:06:00,067 DEBUG   Thread-39 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 17:06:00,434 DEBUG   Thread-39 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 760
+2019-11-09 17:06:00,439 DEBUG   Thread-39 :17440 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-11-09 17:06:00,466 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 311
+2019-11-09 17:06:00,709 DEBUG   Thread-13 :17440 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/gnnproject/a64usb8e/file_stream HTTP/1.1" 200 308
+2019-11-09 17:06:00,713 INFO    MainThread:17440 [run_manager.py:_sync_etc():1383] rendering summary
+2019-11-09 17:06:00,724 INFO    MainThread:17440 [run_manager.py:_sync_etc():1416] syncing files to cloud storage
+2019-11-09 17:06:00,932 DEBUG   Thread-39 :17440 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/gnnproject/a64usb8e/___batch_archive_1.tgz?Expires=1573286822&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=IXOfBCduQd4mDTSkmOUTf1In2dUi3SJr6Secsyanevkxi%2B9vAQM%2BnMUEmeOYHrs8thFuOUKNFyxQgzYTYjMiSMLb8sJwmBHCVKBdcmsn6ILhH76gge4Y2bOXs2U7hQBTVrhb262imFTxQzdeBOBmQYsEfJWi5Yk2tkG91nS1IV5nHPftVATCjy6ED1YafUE4%2F8TyAf5hnk3MiAw3X%2Bh%2BvmP0D6QHEhIldoWvXTsCb%2Bp9QeDGKW6ASHZvoBOOkofufX3hqas9tM2AAyoNytdLAnU99W81oH00NT7OCNV8EpBKV5M0H6alnaQ9QVSfYRWuyoKFStRg7WM4pPMw74xtsw%3D%3D HTTP/1.1" 200 0
+2019-11-09 17:06:01,981 INFO    MainThread:17440 [run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/gnnproject/runs/a64usb8e
+2019-11-09 17:06:01,981 INFO    MainThread:17440 [a64usb8e:run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/gnnproject/runs/a64usb8e

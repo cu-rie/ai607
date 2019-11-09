@@ -3,10 +3,10 @@
     "program": "C:/Users/kyuree/dev/ai601/train_gat.py",
     "git": {
         "remote": "https://github.com/cu-rie/ai607.git",
-        "commit": "e654a6451ae15f7765ed6a9fe6bd4721a9273541"
+        "commit": "88f9ffc3f5a5ab75d841ff47a6cb401246c24ef9"
     },
     "email": "ahnkjuree@gmail.com",
-    "startedAt": "2019-11-09T07:57:48.884522",
+    "startedAt": "2019-11-09T08:03:31.582942",
     "host": "DESKTOP-AL6I7CR",
     "username": "kyuree",
     "executable": "C:\\Users\\kyuree\\Anaconda3\\envs\\ai601_env\\python.exe",
@@ -18,7 +18,7 @@
     "jobType": null,
     "mode": "run",
     "name": "GAT_citeseer",
-    "project": "kaistai607",
-    "heartbeatAt": "2019-11-09T08:00:10.431112",
+    "project": "gnnproject",
+    "heartbeatAt": "2019-11-09T08:05:58.019901",
     "exitcode": 0
 }
