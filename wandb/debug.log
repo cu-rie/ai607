@@ -1,142 +1,19 @@
-2019-11-07 23:31:24,347 DEBUG   MainThread:2668 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
-2019-11-07 23:31:24,374 DEBUG   MainThread:2668 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
-2019-11-07 23:31:24,377 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
-2019-11-07 23:31:24,432 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:24,495 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:24,565 DEBUG   MainThread:2668 [run_manager.py:__init__():535] Initialized sync for kaistai607/2ese9cnq
-2019-11-07 23:31:24,570 INFO    MainThread:2668 [run_manager.py:wrap_existing_process():1131] wrapping existing process 1200
-2019-11-07 23:31:24,572 DEBUG   MainThread:2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
-2019-11-07 23:31:24,979 DEBUG   MainThread:2668 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
-2019-11-07 23:31:25,155 INFO    MainThread:2668 [run_manager.py:init_run():916] system metrics and metadata threads started
-2019-11-07 23:31:25,163 INFO    MainThread:2668 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
-2019-11-07 23:31:25,186 DEBUG   Thread-20 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:25,354 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
-2019-11-07 23:31:25,631 DEBUG   Thread-20 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
-2019-11-07 23:31:25,647 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1035] saving patches
-2019-11-07 23:31:25,648 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:25,740 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:25,806 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:25,878 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:26,042 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'merge-base', 'HEAD', '1e6b4de68a0d8930112c1bdebcbd8bfad4f9b8a7'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
-2019-11-07 23:31:26,150 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1039] saving pip packages
-2019-11-07 23:31:26,151 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1041] initializing streaming files api
-2019-11-07 23:31:26,153 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1048] unblocking file change observer, beginning sync with W&B servers
-2019-11-07 23:31:26,153 INFO    MainThread:2668 [run_manager.py:wrap_existing_process():1148] informing user process we are ready to proceed
-2019-11-07 23:31:26,153 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
-2019-11-07 23:31:26,156 INFO    MainThread:2668 [run_manager.py:_sync_etc():1255] entering loop for messages from user process
-2019-11-07 23:31:26,157 DEBUG   Thread-31 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:26,372 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:26,414 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\config.yaml
-2019-11-07 23:31:26,422 DEBUG   Thread-7  :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:26,517 DEBUG   Thread-31 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
-2019-11-07 23:31:26,814 DEBUG   Thread-7  :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
-2019-11-07 23:31:26,821 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
-2019-11-07 23:31:26,821 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\requirements.txt
-2019-11-07 23:31:26,822 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\diff.patch
-2019-11-07 23:31:26,822 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:27,383 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:27,384 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:27,477 DEBUG   Thread-33 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:27,838 DEBUG   Thread-33 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 772
-2019-11-07 23:31:27,844 DEBUG   Thread-33 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2019-11-07 23:31:28,296 DEBUG   Thread-33 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/___batch_archive_1.tgz?Expires=1573137148&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=ImjiNuh4ypsuk6SztgaU9b4O4e%2BU5vFEkeionKO33moUlgr%2B8pNHtiuzSNuIDs%2FDuI9xko%2FG6sxLhpmU%2B%2BJKnOavsMux%2Bv0zDalAHhw4th76PryIrpLRXumPKczTpeK7Wjwnt4OmY61JWzrLg409EzvT7zTS0LFX22vtyAB5AQ5LoG2fWeyPFHlXF%2BSBMvPlfHscE28ZYpr%2BtGyx7v2vbbgp5Rd77Dbkbfrfo1n30Sre51e9zQFTv8nsKyhj2aKkU1UvqyYea%2F1fbL1sN3PzONngg%2BexkWTWS5clzXb585f7owe%2BH8f4yIgZogixA8HYv76LL2YukiYIfKRZRAu46A%3D%3D HTTP/1.1" 200 0
-2019-11-07 23:31:28,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:28,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:28,394 DEBUG   Thread-13 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:28,814 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:29,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:29,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:30,390 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:30,391 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:30,662 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:31,393 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:31,393 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:32,408 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:32,408 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:32,720 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:33,410 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:33,410 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:34,413 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:34,414 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:34,668 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:35,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:35,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:36,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:36,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:36,720 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:37,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:37,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:38,433 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:38,433 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:38,737 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:39,437 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:39,437 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:40,463 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:40,464 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:40,721 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:41,483 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
-2019-11-07 23:31:41,484 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:41,485 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:41,522 DEBUG   Thread-31 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:41,896 DEBUG   Thread-31 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
-2019-11-07 23:31:42,502 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:42,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:42,797 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:43,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:43,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:44,511 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:44,512 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:44,782 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:45,516 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:45,517 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:46,525 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:46,525 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:46,789 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:47,527 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:47,527 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:48,531 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:48,532 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:48,784 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:49,532 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:49,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:50,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:50,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:50,807 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:51,535 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:51,535 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:52,536 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:52,537 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:_sync_etc():1278] received message from user process: {"exitcode": 0}
-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:_sync_etc():1364] closing log streams and sending exitcode to W&B
-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:shutdown():1055] shutting down system stats and metadata service
-2019-11-07 23:31:52,801 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:53,300 INFO    MainThread:2668 [run_manager.py:shutdown():1067] stopping streaming files and file change observer
-2019-11-07 23:31:53,537 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
-2019-11-07 23:31:53,538 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
-2019-11-07 23:31:53,538 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
-2019-11-07 23:31:53,539 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
-2019-11-07 23:31:53,544 INFO    MainThread:2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-events.jsonl
-2019-11-07 23:31:54,419 DEBUG   Thread-35 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:54,512 DEBUG   Thread-36 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:54,542 DEBUG   MainThread:2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:54,787 DEBUG   Thread-35 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 771
-2019-11-07 23:31:54,791 DEBUG   Thread-35 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2019-11-07 23:31:54,881 DEBUG   Thread-36 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 750
-2019-11-07 23:31:54,889 DEBUG   Thread-36 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2019-11-07 23:31:54,928 DEBUG   MainThread:2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
-2019-11-07 23:31:55,239 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
-2019-11-07 23:31:55,299 DEBUG   Thread-35 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/wandb-metadata.json?Expires=1573137175&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=D1tJmpcIl3yJCJmolUBEu03elH%2BE8e5khcBy7WNBGst1SuiKDcwl2QIYQO4QGFVBgsMh7O%2B6XPMu2KLo5G1Q95k8nInbbHgbnUdg%2BXhoniL1xKojv20mU0jtfxglc7AAzJY1f6j7SfFXQLApZHJ519SatLx7ogye4Dh071M88G6LWaSQoCBa5KOf%2F0Nol%2FQAUD1Zn8SVuOoFGvTMi%2FxNTNsbsHRGSueJ217cYLlWfLNEmNVhTRycYH6FkVUsMLGNljYiDjRyLffibi3f4Qb4wylBQRUbXBmZHXXjRIbxxQveEz1qV4RCwBAnMOX9ahls9WQj7vjv1rZBmnkj2a8Uxw%3D%3D HTTP/1.1" 200 0
-2019-11-07 23:31:55,372 DEBUG   Thread-36 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/output.log?Expires=1573137175&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=dZZ92aMy9lAdTIGGHfDjRqKFVa68P%2BVjJxn%2FPZ%2BZrdwqiUE2TgLQ51YvTQuDEq1bmnVjRYWX3Nm66%2BiDeW0HzEkht%2BhPaVOUTeldELCSXRVhV9bxg9EGrNnGkz1z1A5NBI7BUAXTSMM3hK%2BL9m2ONK04TZoY22rUp7W4HET2YHcuuP12lCqFD5bcmhdp0okuwOmnlafzti0kHFBlFV1jQ7grh3EbSRoNxlcJX7IB0NeJd%2FCyxbj9sJHcv7%2B2McWkWCGzhbJB%2FltmbqK%2BzGDDw0lOD%2Fj7YOVtl7i5xID3SNVPMKKynKdgcockZMVeGBGeLq5X%2Bwwtr236z%2BbnrjANLg%3D%3D HTTP/1.1" 200 0
-2019-11-07 23:31:55,561 DEBUG   Thread-37 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:55,675 DEBUG   Thread-38 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2019-11-07 23:31:55,789 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 308
-2019-11-07 23:31:55,791 INFO    MainThread:2668 [run_manager.py:_sync_etc():1383] rendering summary
-2019-11-07 23:31:55,806 INFO    MainThread:2668 [run_manager.py:_sync_etc():1416] syncing files to cloud storage
-2019-11-07 23:31:55,922 DEBUG   Thread-37 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 765
-2019-11-07 23:31:55,926 DEBUG   Thread-37 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2019-11-07 23:31:56,044 DEBUG   Thread-38 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 764
-2019-11-07 23:31:56,052 DEBUG   Thread-38 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2019-11-07 23:31:56,421 DEBUG   Thread-37 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/config.yaml?Expires=1573137176&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=kNWJzvp4W0sk%2BzNScYBzrX09FgZTVkFbo7IFt%2Bu%2FyKUhR8CZd%2BAm%2FTbUiU7jrs%2BQsa469Nmma9vRAEnnG9lDhSuxtOEsqIbZRDaEEYCFYzkxxk3T01RrVtMUcvYVvt3RzglElZULAEdp8ir4n2t8c%2FrupkMEFmD9c1j7sJp1AZqjb7iJnu4s9ielLt7cWRpo8qfmovsKyvncgOkpulSzjiXlZtZiAmXRakGrVg90v97OoINrpDrb53CLe9PWemNbcrS0KSOG5AW%2F7JDw6TtPMoB%2F497gnyTtssRi2WZ2aBgg33lmQxa1u8Sga15NB2WUM9KtrCo%2B%2FdchJ1nTZF0UEA%3D%3D HTTP/1.1" 200 0
-2019-11-07 23:31:56,518 DEBUG   Thread-38 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/wandb-summary.json?Expires=1573137177&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=OjGSaHEhgqXujjnszOVNJtAv2pWWnoSsSNR3A7kTKcdUJK6J99FQ1RgZuHEbEmnKbBVjHlGo2tdVm6xZROyc7LL2LyESrZi9WOD1fqoqcmpCrPuOGnZf57ZW88j%2FzLGCjbaGAEBrUuy%2FTLAt0d13rxgbbXAYQ9I3aWAQRFlWbC7Np5%2FhY5rUZfPzir5IA0r5sSpdR0IH%2FWqsEk0p28aoSnohI01VFmFt4YaX%2BNGb4fgqKz%2Bs3i1Jiu%2F5Lo%2FdVrZImdAHzv%2BOrtRvBmfv%2FrhDfIQWUf0qSw8p07waoXyfj56D9PEs%2BKBx9KkbK4eSA3jckMybKyy91X%2FC0fiSDo7gVw%3D%3D HTTP/1.1" 200 0
-2019-11-07 23:31:57,560 INFO    MainThread:2668 [run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/kaistai607/runs/2ese9cnq
-2019-11-07 23:31:57,560 INFO    MainThread:2668 [2ese9cnq:run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/kaistai607/runs/2ese9cnq
+2019-11-09 16:57:49,927 DEBUG   MainThread:17968 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+2019-11-09 16:57:49,957 DEBUG   MainThread:17968 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+2019-11-09 16:57:49,961 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
+2019-11-09 16:57:50,021 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 16:57:50,081 DEBUG   MainThread:17968 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 16:57:50,157 DEBUG   MainThread:17968 [run_manager.py:__init__():535] Initialized sync for kaistai607/wkzqv22m
+2019-11-09 16:57:50,162 INFO    MainThread:17968 [run_manager.py:wrap_existing_process():1131] wrapping existing process 12900
+2019-11-09 16:57:50,165 DEBUG   MainThread:17968 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2019-11-09 16:57:50,745 DEBUG   MainThread:17968 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
+2019-11-09 16:57:50,936 INFO    Thread-7  :17968 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_075748-wkzqv22m\wandb-metadata.json
+2019-11-09 16:57:51,034 INFO    MainThread:17968 [run_manager.py:init_run():916] system metrics and metadata threads started
+2019-11-09 16:57:51,034 INFO    MainThread:17968 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
+2019-11-09 16:57:51,045 DEBUG   Thread-20 :17968 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-11-09 16:57:51,435 DEBUG   Thread-20 :17968 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
+2019-11-09 16:57:51,451 INFO    Thread-20 :17968 [run_manager.py:_upsert_run():1035] saving patches
+2019-11-09 16:57:51,452 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 16:57:51,542 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 16:57:51,606 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+2019-11-09 16:57:51,701 DEBUG   Thread-20 :17968 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)

@@ -1,0 +1,514 @@
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+index 5d45a43..917cd1e 100644
+--- a/.idea/workspace.xml
++++ b/.idea/workspace.xml
+@@ -3,11 +3,9 @@
+   <component name="ChangeListManager">
+     <list default="true" id="fe72474c-d158-4d71-bfb4-aff9b2b6bdbf" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/gcn" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/train_gat.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_gat.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/train_gcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_gcn.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/utils/train_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/train_utils.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/wandb/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/debug.log" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/wandb/settings" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/settings" afterDir="false" />
+     </list>
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -15,13 +13,32 @@
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="DockManager">
++    <window id="1">
++      <content type="file-editors">
++        <state>
++          <leaf>
++            <file pinned="false" current-in-tab="true">
++              <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
++                <provider selected="true" editor-type-id="text-editor">
++                  <state relative-caret-position="119">
++                    <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
++                  </state>
++                </provider>
++              </entry>
++            </file>
++          </leaf>
++        </state>
++      </content>
++    </window>
++  </component>
+   <component name="FileEditorManager">
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+-      <file pinned="false" current-in-tab="false">
++      <file pinned="false" current-in-tab="true">
+         <entry file="file://$PROJECT_DIR$/train_gcn.py">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="178">
+-              <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
++            <state relative-caret-position="813">
++              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+               <folding>
+                 <element signature="e#0#12#0" expanded="true" />
+               </folding>
+@@ -29,11 +46,11 @@
+           </provider>
+         </entry>
+       </file>
+-      <file pinned="false" current-in-tab="true">
++      <file pinned="false" current-in-tab="false">
+         <entry file="file://$PROJECT_DIR$/train_gat.py">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="283">
+-              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
++            <state relative-caret-position="646">
++              <caret line="46" column="34" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="34" />
+               <folding>
+                 <element signature="e#0#12#0" expanded="true" />
+               </folding>
+@@ -45,7 +62,7 @@
+         <entry file="file://$PROJECT_DIR$/requirements.txt">
+           <provider selected="true" editor-type-id="text-editor">
+             <state relative-caret-position="68">
+-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
++              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+             </state>
+           </provider>
+         </entry>
+@@ -55,7 +72,7 @@
+           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+             <state split_layout="SPLIT">
+               <first_editor relative-caret-position="51">
+-                <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
++                <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+               </first_editor>
+               <second_editor />
+             </state>
+@@ -81,6 +98,9 @@
+       <find>identity</find>
+       <find>edge_softmax</find>
+       <find>self.fc</find>
++      <find>mask</find>
++      <find>eval</find>
++      <find>val_</find>
+     </findStrings>
+   </component>
+   <component name="Git.Settings">
+@@ -100,20 +120,19 @@
+         <option value="$PROJECT_DIR$/models/GCN.py" />
+         <option value="$PROJECT_DIR$/models/graphconv.py" />
+         <option value="$PROJECT_DIR$/models/gatlayer.py" />
+-        <option value="$PROJECT_DIR$/utils/train_utils.py" />
+         <option value="$PROJECT_DIR$/models/GAT.py" />
+         <option value="$PROJECT_DIR$/train.py" />
+         <option value="$PROJECT_DIR$/Readme.md" />
+-        <option value="$PROJECT_DIR$/train_gcn.py" />
+         <option value="$PROJECT_DIR$/train_gat.py" />
++        <option value="$PROJECT_DIR$/train_gcn.py" />
++        <option value="$PROJECT_DIR$/utils/train_utils.py" />
+       </list>
+     </option>
+   </component>
+   <component name="ProjectFrameBounds" extendedState="6">
+-    <option name="x" value="191" />
+-    <option name="y" value="19" />
+-    <option name="width" value="1395" />
+-    <option name="height" value="1056" />
++    <option name="x" value="43" />
++    <option name="width" value="1209" />
++    <option name="height" value="514" />
+   </component>
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectView">
+@@ -121,7 +140,6 @@
+       <foldersAlwaysOnTop value="true" />
+     </navigator>
+     <panes>
+-      <pane id="Scope" />
+       <pane id="ProjectPane">
+         <subPane>
+           <expand>
+@@ -142,6 +160,7 @@
+           <select />
+         </subPane>
+       </pane>
++      <pane id="Scope" />
+     </panes>
+   </component>
+   <component name="PropertiesComponent">
+@@ -308,13 +327,13 @@
+     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+     <editor active="true" />
+     <layout>
+-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15700738" />
++      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15700738" />
+       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+       <window_info id="Favorites" order="2" side_tool="true" />
+       <window_info anchor="bottom" id="Message" order="0" />
+       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42470205" />
+-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5471289" />
++      <window_info anchor="bottom" id="Run" order="2" weight="0.42470205" />
++      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.42036837" />
+       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+       <window_info anchor="bottom" id="TODO" order="6" weight="0.22318527" />
+@@ -332,30 +351,15 @@
+       <breakpoints>
+         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+           <url>file://$PROJECT_DIR$/utils/train_utils.py</url>
+-          <line>9</line>
+-          <option name="timeStamp" value="8" />
++          <line>10</line>
++          <option name="timeStamp" value="11" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
+   <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/gcn/gcn/train.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="244">
+-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/gcn/gcn/models.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="200">
+-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+-          <folding>
+-            <element signature="e#0#24#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
++    <entry file="file://$PROJECT_DIR$/gcn/gcn/train.py" />
++    <entry file="file://$PROJECT_DIR$/gcn/gcn/models.py" />
+     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/_methods.py">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="175">
+@@ -391,13 +395,7 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/1_gcn.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="85">
+-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+-        </state>
+-      </provider>
+-    </entry>
++    <entry file="file://$PROJECT_DIR$/1_gcn.py" />
+     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/dgl/data/__init__.py">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="238">
+@@ -419,13 +417,7 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/test.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="17">
+-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+-        </state>
+-      </provider>
+-    </entry>
++    <entry file="file://$PROJECT_DIR$/test.py" />
+     <entry file="file://$PROJECT_DIR$/models/GCN.py">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="272">
+@@ -443,16 +435,7 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/models/gatlayer.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="136">
+-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+-          <folding>
+-            <element signature="e#116#134#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
++    <entry file="file://$PROJECT_DIR$/models/gatlayer.py" />
+     <entry file="file://$USER_HOME$/Anaconda3/envs/ai601_env/Lib/site-packages/torch/nn/functional.py">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="652">
+@@ -477,13 +460,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="136">
+-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/models/GAT.py">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="697">
+@@ -494,16 +470,7 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/utils/load_data.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="108">
+-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+-          <folding>
+-            <element signature="e#0#12#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
++    <entry file="file://$PROJECT_DIR$/utils/load_data.py" />
+     <entry file="file://$PROJECT_DIR$/models/wandb/run-20191107_134436-dr3031y6/requirements.txt">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="187">
+@@ -531,10 +498,20 @@
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/train_gat.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="646">
++          <caret line="46" column="34" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="34" />
++          <folding>
++            <element signature="e#0#12#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/requirements.txt">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="68">
+-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
++          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+         </state>
+       </provider>
+     </entry>
+@@ -542,7 +519,7 @@
+       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+         <state split_layout="SPLIT">
+           <first_editor relative-caret-position="51">
+-            <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
++            <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+           </first_editor>
+           <second_editor />
+         </state>
+@@ -550,21 +527,18 @@
+     </entry>
+     <entry file="file://$PROJECT_DIR$/train_gcn.py">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="178">
+-          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
++        <state relative-caret-position="813">
++          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+           <folding>
+             <element signature="e#0#12#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/train_gat.py">
++    <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="283">
+-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+-          <folding>
+-            <element signature="e#0#12#0" expanded="true" />
+-          </folding>
++        <state relative-caret-position="119">
++          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+         </state>
+       </provider>
+     </entry>
+diff --git a/train_gcn.py b/train_gcn.py
+index 0910eca..2b57921 100644
+--- a/train_gcn.py
++++ b/train_gcn.py
+@@ -18,9 +18,9 @@ if __name__ == "__main__":
+ 
+     graph = dgl.DGLGraph(data.graph)
+     features = torch.Tensor(data.features)
+-    train_mask = torch.LongTensor(data.train_mask)
+-    test_mask = torch.LongTensor(data.test_mask)
+-    val_mask = torch.LongTensor(data.val_mask)
++    train_mask = torch.LongTensor(data.train_mask).bool()
++    test_mask = torch.LongTensor(data.test_mask).bool()
++    val_mask = torch.LongTensor(data.val_mask).bool()
+     labels = torch.LongTensor(data.labels)
+     num_labels = data.num_labels
+ 
+diff --git a/utils/__pycache__/train_utils.cpython-37.pyc b/utils/__pycache__/train_utils.cpython-37.pyc
+index 1fa5503..4ec25ff 100644
+Binary files a/utils/__pycache__/train_utils.cpython-37.pyc and b/utils/__pycache__/train_utils.cpython-37.pyc differ
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 6fa5c3b..ae2a087 100644
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1,142 +1,19 @@
+-2019-11-07 23:31:24,347 DEBUG   MainThread:2668 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+-2019-11-07 23:31:24,374 DEBUG   MainThread:2668 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
+-2019-11-07 23:31:24,377 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
+-2019-11-07 23:31:24,432 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:24,495 DEBUG   MainThread:2668 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:24,565 DEBUG   MainThread:2668 [run_manager.py:__init__():535] Initialized sync for kaistai607/2ese9cnq
+-2019-11-07 23:31:24,570 INFO    MainThread:2668 [run_manager.py:wrap_existing_process():1131] wrapping existing process 1200
+-2019-11-07 23:31:24,572 DEBUG   MainThread:2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+-2019-11-07 23:31:24,979 DEBUG   MainThread:2668 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
+-2019-11-07 23:31:25,155 INFO    MainThread:2668 [run_manager.py:init_run():916] system metrics and metadata threads started
+-2019-11-07 23:31:25,163 INFO    MainThread:2668 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
+-2019-11-07 23:31:25,186 DEBUG   Thread-20 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:25,354 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
+-2019-11-07 23:31:25,631 DEBUG   Thread-20 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
+-2019-11-07 23:31:25,647 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1035] saving patches
+-2019-11-07 23:31:25,648 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:25,740 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:25,806 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:25,878 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:26,042 DEBUG   Thread-20 :2668 [cmd.py:execute():724] Popen(['git', 'merge-base', 'HEAD', '1e6b4de68a0d8930112c1bdebcbd8bfad4f9b8a7'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
+-2019-11-07 23:31:26,150 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1039] saving pip packages
+-2019-11-07 23:31:26,151 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1041] initializing streaming files api
+-2019-11-07 23:31:26,153 INFO    Thread-20 :2668 [run_manager.py:_upsert_run():1048] unblocking file change observer, beginning sync with W&B servers
+-2019-11-07 23:31:26,153 INFO    MainThread:2668 [run_manager.py:wrap_existing_process():1148] informing user process we are ready to proceed
+-2019-11-07 23:31:26,153 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
+-2019-11-07 23:31:26,156 INFO    MainThread:2668 [run_manager.py:_sync_etc():1255] entering loop for messages from user process
+-2019-11-07 23:31:26,157 DEBUG   Thread-31 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:26,372 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:26,414 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\config.yaml
+-2019-11-07 23:31:26,422 DEBUG   Thread-7  :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:26,517 DEBUG   Thread-31 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+-2019-11-07 23:31:26,814 DEBUG   Thread-7  :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
+-2019-11-07 23:31:26,821 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
+-2019-11-07 23:31:26,821 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\requirements.txt
+-2019-11-07 23:31:26,822 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\diff.patch
+-2019-11-07 23:31:26,822 INFO    Thread-7  :2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:27,383 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:27,384 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:27,477 DEBUG   Thread-33 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:27,838 DEBUG   Thread-33 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 772
+-2019-11-07 23:31:27,844 DEBUG   Thread-33 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+-2019-11-07 23:31:28,296 DEBUG   Thread-33 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/___batch_archive_1.tgz?Expires=1573137148&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=ImjiNuh4ypsuk6SztgaU9b4O4e%2BU5vFEkeionKO33moUlgr%2B8pNHtiuzSNuIDs%2FDuI9xko%2FG6sxLhpmU%2B%2BJKnOavsMux%2Bv0zDalAHhw4th76PryIrpLRXumPKczTpeK7Wjwnt4OmY61JWzrLg409EzvT7zTS0LFX22vtyAB5AQ5LoG2fWeyPFHlXF%2BSBMvPlfHscE28ZYpr%2BtGyx7v2vbbgp5Rd77Dbkbfrfo1n30Sre51e9zQFTv8nsKyhj2aKkU1UvqyYea%2F1fbL1sN3PzONngg%2BexkWTWS5clzXb585f7owe%2BH8f4yIgZogixA8HYv76LL2YukiYIfKRZRAu46A%3D%3D HTTP/1.1" 200 0
+-2019-11-07 23:31:28,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:28,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:28,394 DEBUG   Thread-13 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:28,814 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:29,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:29,386 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:30,390 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:30,391 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:30,662 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:31,393 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:31,393 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:32,408 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:32,408 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:32,720 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:33,410 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:33,410 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:34,413 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:34,414 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:34,668 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:35,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:35,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:36,428 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:36,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:36,720 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:37,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:37,430 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:38,433 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:38,433 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:38,737 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:39,437 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:39,437 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:40,463 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:40,464 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:40,721 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:41,483 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
+-2019-11-07 23:31:41,484 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:41,485 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:41,522 DEBUG   Thread-31 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:41,896 DEBUG   Thread-31 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+-2019-11-07 23:31:42,502 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:42,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:42,797 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:43,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:43,503 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:44,511 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:44,512 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:44,782 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:45,516 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:45,517 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:46,525 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:46,525 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:46,789 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:47,527 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:47,527 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:48,531 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:48,532 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:48,784 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:49,532 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:49,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:50,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:50,533 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:50,807 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:51,535 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:51,535 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:52,536 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:52,537 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:_sync_etc():1278] received message from user process: {"exitcode": 0}
+-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:_sync_etc():1364] closing log streams and sending exitcode to W&B
+-2019-11-07 23:31:52,727 INFO    MainThread:2668 [run_manager.py:shutdown():1055] shutting down system stats and metadata service
+-2019-11-07 23:31:52,801 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:53,300 INFO    MainThread:2668 [run_manager.py:shutdown():1067] stopping streaming files and file change observer
+-2019-11-07 23:31:53,537 INFO    Thread-7  :2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-metadata.json
+-2019-11-07 23:31:53,538 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-history.jsonl
+-2019-11-07 23:31:53,538 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\output.log
+-2019-11-07 23:31:53,539 INFO    MainThread:2668 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-summary.json
+-2019-11-07 23:31:53,544 INFO    MainThread:2668 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191107_143123-2ese9cnq\wandb-events.jsonl
+-2019-11-07 23:31:54,419 DEBUG   Thread-35 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:54,512 DEBUG   Thread-36 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:54,542 DEBUG   MainThread:2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:54,787 DEBUG   Thread-35 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 771
+-2019-11-07 23:31:54,791 DEBUG   Thread-35 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+-2019-11-07 23:31:54,881 DEBUG   Thread-36 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 750
+-2019-11-07 23:31:54,889 DEBUG   Thread-36 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+-2019-11-07 23:31:54,928 DEBUG   MainThread:2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 546
+-2019-11-07 23:31:55,239 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 311
+-2019-11-07 23:31:55,299 DEBUG   Thread-35 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/wandb-metadata.json?Expires=1573137175&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=D1tJmpcIl3yJCJmolUBEu03elH%2BE8e5khcBy7WNBGst1SuiKDcwl2QIYQO4QGFVBgsMh7O%2B6XPMu2KLo5G1Q95k8nInbbHgbnUdg%2BXhoniL1xKojv20mU0jtfxglc7AAzJY1f6j7SfFXQLApZHJ519SatLx7ogye4Dh071M88G6LWaSQoCBa5KOf%2F0Nol%2FQAUD1Zn8SVuOoFGvTMi%2FxNTNsbsHRGSueJ217cYLlWfLNEmNVhTRycYH6FkVUsMLGNljYiDjRyLffibi3f4Qb4wylBQRUbXBmZHXXjRIbxxQveEz1qV4RCwBAnMOX9ahls9WQj7vjv1rZBmnkj2a8Uxw%3D%3D HTTP/1.1" 200 0
+-2019-11-07 23:31:55,372 DEBUG   Thread-36 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/output.log?Expires=1573137175&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=dZZ92aMy9lAdTIGGHfDjRqKFVa68P%2BVjJxn%2FPZ%2BZrdwqiUE2TgLQ51YvTQuDEq1bmnVjRYWX3Nm66%2BiDeW0HzEkht%2BhPaVOUTeldELCSXRVhV9bxg9EGrNnGkz1z1A5NBI7BUAXTSMM3hK%2BL9m2ONK04TZoY22rUp7W4HET2YHcuuP12lCqFD5bcmhdp0okuwOmnlafzti0kHFBlFV1jQ7grh3EbSRoNxlcJX7IB0NeJd%2FCyxbj9sJHcv7%2B2McWkWCGzhbJB%2FltmbqK%2BzGDDw0lOD%2Fj7YOVtl7i5xID3SNVPMKKynKdgcockZMVeGBGeLq5X%2Bwwtr236z%2BbnrjANLg%3D%3D HTTP/1.1" 200 0
+-2019-11-07 23:31:55,561 DEBUG   Thread-37 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:55,675 DEBUG   Thread-38 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+-2019-11-07 23:31:55,789 DEBUG   Thread-13 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/sc2rl/kaistai607/2ese9cnq/file_stream HTTP/1.1" 200 308
+-2019-11-07 23:31:55,791 INFO    MainThread:2668 [run_manager.py:_sync_etc():1383] rendering summary
+-2019-11-07 23:31:55,806 INFO    MainThread:2668 [run_manager.py:_sync_etc():1416] syncing files to cloud storage
+-2019-11-07 23:31:55,922 DEBUG   Thread-37 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 765
+-2019-11-07 23:31:55,926 DEBUG   Thread-37 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+-2019-11-07 23:31:56,044 DEBUG   Thread-38 :2668 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 764
+-2019-11-07 23:31:56,052 DEBUG   Thread-38 :2668 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+-2019-11-07 23:31:56,421 DEBUG   Thread-37 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/config.yaml?Expires=1573137176&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=kNWJzvp4W0sk%2BzNScYBzrX09FgZTVkFbo7IFt%2Bu%2FyKUhR8CZd%2BAm%2FTbUiU7jrs%2BQsa469Nmma9vRAEnnG9lDhSuxtOEsqIbZRDaEEYCFYzkxxk3T01RrVtMUcvYVvt3RzglElZULAEdp8ir4n2t8c%2FrupkMEFmD9c1j7sJp1AZqjb7iJnu4s9ielLt7cWRpo8qfmovsKyvncgOkpulSzjiXlZtZiAmXRakGrVg90v97OoINrpDrb53CLe9PWemNbcrS0KSOG5AW%2F7JDw6TtPMoB%2F497gnyTtssRi2WZ2aBgg33lmQxa1u8Sga15NB2WUM9KtrCo%2B%2FdchJ1nTZF0UEA%3D%3D HTTP/1.1" 200 0
+-2019-11-07 23:31:56,518 DEBUG   Thread-38 :2668 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/sc2rl/kaistai607/2ese9cnq/wandb-summary.json?Expires=1573137177&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=OjGSaHEhgqXujjnszOVNJtAv2pWWnoSsSNR3A7kTKcdUJK6J99FQ1RgZuHEbEmnKbBVjHlGo2tdVm6xZROyc7LL2LyESrZi9WOD1fqoqcmpCrPuOGnZf57ZW88j%2FzLGCjbaGAEBrUuy%2FTLAt0d13rxgbbXAYQ9I3aWAQRFlWbC7Np5%2FhY5rUZfPzir5IA0r5sSpdR0IH%2FWqsEk0p28aoSnohI01VFmFt4YaX%2BNGb4fgqKz%2Bs3i1Jiu%2F5Lo%2FdVrZImdAHzv%2BOrtRvBmfv%2FrhDfIQWUf0qSw8p07waoXyfj56D9PEs%2BKBx9KkbK4eSA3jckMybKyy91X%2FC0fiSDo7gVw%3D%3D HTTP/1.1" 200 0
+-2019-11-07 23:31:57,560 INFO    MainThread:2668 [run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/kaistai607/runs/2ese9cnq
+-2019-11-07 23:31:57,560 INFO    MainThread:2668 [2ese9cnq:run_manager.py:_sync_etc():1431] syncing complete: https://app.wandb.ai/sc2rl/kaistai607/runs/2ese9cnq
++2019-11-09 16:57:11,208 DEBUG   MainThread:11068 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
++2019-11-09 16:57:11,238 DEBUG   MainThread:11068 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'The system cannot find the file specified', None, 2, None)
++2019-11-09 16:57:11,241 DEBUG   MainThread:11068 [cmd.py:execute():724] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=<valid stream>)
++2019-11-09 16:57:11,301 DEBUG   MainThread:11068 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
++2019-11-09 16:57:11,386 DEBUG   MainThread:11068 [cmd.py:execute():724] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
++2019-11-09 16:57:11,467 DEBUG   MainThread:11068 [run_manager.py:__init__():535] Initialized sync for kaistai607/df8k4uec
++2019-11-09 16:57:11,471 INFO    MainThread:11068 [run_manager.py:wrap_existing_process():1131] wrapping existing process 2664
++2019-11-09 16:57:11,474 DEBUG   MainThread:11068 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
++2019-11-09 16:57:12,060 DEBUG   MainThread:11068 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 37669
++2019-11-09 16:57:12,220 INFO    Thread-7  :11068 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\kyuree\dev\ai601\wandb\run-20191109_075709-df8k4uec\output.log
++2019-11-09 16:57:12,358 INFO    MainThread:11068 [run_manager.py:init_run():916] system metrics and metadata threads started
++2019-11-09 16:57:12,365 INFO    MainThread:11068 [run_manager.py:init_run():950] upserting run before process can begin, waiting at most 10 seconds
++2019-11-09 16:57:12,386 DEBUG   Thread-20 :11068 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
++2019-11-09 16:57:12,796 DEBUG   Thread-20 :11068 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 498
++2019-11-09 16:57:12,804 INFO    Thread-20 :11068 [run_manager.py:_upsert_run():1035] saving patches
++2019-11-09 16:57:12,805 DEBUG   Thread-20 :11068 [cmd.py:execute():724] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
++2019-11-09 16:57:12,872 DEBUG   Thread-20 :11068 [cmd.py:execute():724] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
++2019-11-09 16:57:12,945 DEBUG   Thread-20 :11068 [cmd.py:execute():724] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)
++2019-11-09 16:57:13,026 DEBUG   Thread-20 :11068 [cmd.py:execute():724] Popen(['git', 'version'], cwd=C:\Users\kyuree\dev\ai601, universal_newlines=False, shell=None, istream=None)

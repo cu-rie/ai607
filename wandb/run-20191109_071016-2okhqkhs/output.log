@@ -1,0 +1,261 @@
+tensor([[-1.0755e-02,  1.7698e-02,  7.3492e-03, -8.7448e-03,  5.1876e-03,
+         -1.7367e-04],
+        [-6.9630e-04,  5.3398e-03,  4.7294e-03, -2.5567e-03,  2.3567e-03,
+         -4.2334e-04],
+        [-1.6268e-02, -4.8000e-03,  8.2338e-03,  1.1505e-03,  2.3997e-04,
+          4.6646e-03],
+        ...,
+        [-2.0876e-03,  5.7852e-03,  3.3317e-03, -1.5635e-03,  2.0831e-04,
+          8.6500e-04],
+        [ 2.5361e-03,  1.2119e-02,  2.2022e-03, -1.3831e-03,  1.3362e-03,
+         -3.1660e-03],
+        [ 1.0479e-03,  3.1208e-03,  2.7052e-05,  6.8103e-04, -2.4600e-03,
+          3.2792e-03]], grad_fn=<AddBackward0>)
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: The size of tensor a (6) must match the size of tensor b (3327) at non-singleton dimension 1
+torch.Size([3327, 6])
+torch.Size([3327])
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: The size of tensor a (6) must match the size of tensor b (3327) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+NameError: name 'train_maks' is not defined
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: range() missing 1 required positional arguments: "end"
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: range() missing 1 required positional arguments: "end"
+tensor([[-0.0007,  0.0053,  0.0047, -0.0026,  0.0024, -0.0004],
+        [-0.0007,  0.0053,  0.0047, -0.0026,  0.0024, -0.0004],
+        [-0.0007,  0.0053,  0.0047, -0.0026,  0.0024, -0.0004],
+        ...,
+        [-0.0108,  0.0177,  0.0073, -0.0087,  0.0052, -0.0002],
+        [-0.0108,  0.0177,  0.0073, -0.0087,  0.0052, -0.0002],
+        [-0.0108,  0.0177,  0.0073, -0.0087,  0.0052, -0.0002]],
+       grad_fn=<IndexBackward>)
+tensor([1, 1, 1,  ..., 3, 3, 3])
+torch.Size([3327])
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+NameError: name 'label' is not defined
+tensor([1, 1, 1,  ..., 0, 0, 0])
+tensor([1, 1, 1,  ..., 0, 0, 0])
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: range() missing 1 required positional arguments: "end"
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: range() missing 2 required positional argument: "start", "end"
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+NameError: name 'e' is not defined
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: range() missing 1 required positional arguments: "end"
+tensor([0, 1, 2])
+tensor([   0,    1,    2,  ..., 3324, 3325, 3326])
+tensor([0, 1, 2,  ..., 0, 0, 0])
+tensor([3, 1, 5,  ..., 3, 1, 5])
+tensor([1, 1, 1,  ..., 0, 0, 0])
+tensor([3, 1, 5,  ..., 0, 0, 0])
+3327
+tensor([0, 0, 0,  ..., 0, 0, 0])
+tensor(500)
+tensor(120)
+tensor([1, 1, 1,  ..., 0, 0, 0])
+tensor([[-1.0755e-02,  1.7698e-02,  7.3492e-03, -8.7448e-03,  5.1876e-03,
+         -1.7367e-04],
+        [-6.9630e-04,  5.3398e-03,  4.7294e-03, -2.5567e-03,  2.3567e-03,
+         -4.2334e-04],
+        [-1.6268e-02, -4.8000e-03,  8.2338e-03,  1.1505e-03,  2.3997e-04,
+          4.6646e-03],
+        ...,
+        [-2.0876e-03,  5.7852e-03,  3.3317e-03, -1.5635e-03,  2.0831e-04,
+          8.6500e-04],
+        [ 2.5361e-03,  1.2119e-02,  2.2022e-03, -1.3831e-03,  1.3362e-03,
+         -3.1660e-03],
+        [ 1.0479e-03,  3.1208e-03,  2.7052e-05,  6.8103e-04, -2.4600e-03,
+          3.2792e-03]], grad_fn=<AddBackward0>)
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: The size of tensor a (6) must match the size of tensor b (3327) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+NameError: name 'train_maks' is not defined
+tensor([1, 1, 1,  ..., 0, 0, 0])
+tensor([1, 1, 1,  ..., 0, 0, 0])
+torch.Size([6654])
+tensor([1, 1, 1,  ..., 0, 0, 0])
+[tensor([1, 1, 1,  ..., 0, 0, 0]), tensor([1, 1, 1,  ..., 0, 0, 0])]
+tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]])
+torch.Size([2, 3327])
+torch.Size([3327, 2])
+tensor([[0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        ...,
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.]])
+torch.Size([3327, 6])
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: scatter() received an invalid combination of arguments - got (int), but expected one of:
+ * (name dim, Tensor index, Tensor src)
+ * (int dim, Tensor index, Tensor src)
+ * (name dim, Tensor index, Number value)
+ * (int dim, Tensor index, Number value)
+
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: scatter() received an invalid combination of arguments - got (int, Tensor), but expected one of:
+ * (name dim, Tensor index, Tensor src)
+ * (int dim, Tensor index, Tensor src)
+ * (name dim, Tensor index, Number value)
+ * (int dim, Tensor index, Number value)
+
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+ValueError: only one element tensors can be converted to Python scalars
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+tensor([[0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        ...,
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.],
+        [0., 0., 0., 0., 0., 0.]])
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: scatter_() received an invalid combination of arguments - got (int, numpy.ndarray, int), but expected one of:
+ * (int dim, Tensor index, Tensor src)
+      didn't match because some of the arguments have invalid types: (int, !numpy.ndarray!, !int!)
+ * (int dim, Tensor index, Number value)
+      didn't match because some of the arguments have invalid types: (int, !numpy.ndarray!, !int!)
+
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: only size-1 arrays can be converted to Python scalars
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: only size-1 arrays can be converted to Python scalars
+tensor([3., 1., 5.,  ..., 3., 1., 5.])
+tensor([3, 1, 5,  ..., 3, 1, 5], dtype=torch.int32)
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: Expected object of scalar type Long but got scalar type Int for argument #3 'index' in call to _th_scatter_
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must be either empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:668
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must be either empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:668
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: scatter_() received an invalid combination of arguments - got (int, Tensor), but expected one of:
+ * (int dim, Tensor index, Tensor src)
+ * (int dim, Tensor index, Number value)
+
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+TypeError: scatter() received an invalid combination of arguments - got (int, int, int), but expected one of:
+ * (name dim, Tensor index, Tensor src)
+      didn't match because some of the arguments have invalid types: (!int!, !int!, !int!)
+ * (int dim, Tensor index, Tensor src)
+      didn't match because some of the arguments have invalid types: (int, !int!, !int!)
+ * (name dim, Tensor index, Number value)
+      didn't match because some of the arguments have invalid types: (!int!, !int!, !int!)
+ * (int dim, Tensor index, Number value)
+      didn't match because some of the arguments have invalid types: (int, !int!, !int!)
+
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\helpers\pydev\_pydevd_bundle\pydevd_exec2.py", line 3, in Exec
+    exec(exp, global_vars, local_vars)
+  File "<input>", line 1, in <module>
+RuntimeError: invalid argument 3: Index tensor must either be empty or have same dimensions as output tensor at C:\w\1\s\tmp_conda_3.7_160731\conda\conda-bld\pytorch_1570810122324\work\aten\src\TH/generic/THTensorEvenMoreMath.cpp:133
+torch.Size([3327])
+torch.Size([3327, 6])

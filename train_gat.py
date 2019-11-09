@@ -20,9 +20,9 @@ if __name__ == "__main__":
     graph.add_edges(graph.nodes(), graph.nodes())
 
     features = torch.Tensor(data.features)
-    train_mask = torch.LongTensor(data.train_mask)
-    test_mask = torch.LongTensor(data.test_mask)
-    val_mask = torch.LongTensor(data.val_mask)
+    train_mask = torch.LongTensor(data.train_mask).bool()
+    test_mask = torch.LongTensor(data.test_mask).bool()
+    val_mask = torch.LongTensor(data.val_mask).bool()
     labels = torch.LongTensor(data.labels)
     num_labels = data.num_labels
 
