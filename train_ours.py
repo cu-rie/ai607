@@ -12,7 +12,8 @@ if __name__ == "__main__":
     import wandb
     import dgl
 
-    exp_name = 'Ours_citeseer'
+    exp_name = 'DEBUG'
+    # exp_name = 'Ours_citeseer'
     data = load_citeseer()
 
     graph = dgl.DGLGraph(data.graph)

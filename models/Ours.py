@@ -29,19 +29,26 @@ class OurNetwork(nn.Module):
 
         self.use_intermediate_embedding = use_intermediate_embedding
         if use_intermediate_embedding:
-            embedding_dim = [input_dim] + [n_hidden] * n_layers + [n_classes]
-            self.intermediate_weight = torch.nn.Parameter(torch.Tensor(embedding_dim), requires_grad=True)
+            self.intermediate_layer = nn.ModuleList()
+            self.intermediate_layer.append(nn.Linear(input_dim, n_classes))
+            for i in range(n_layers - 1):
+                self.intermediate_layer.append(nn.Linear(n_hidden, n_classes))
+            self.out_layer = nn.Linear(n_layers+1, n_classes)
 
     def forward(self, graph, features):
         if self.use_intermediate_embedding:
-            intermediate_embedding = []
+            intermediate_embeddings = []
             h = features
-            intermediate_embedding.append(h)
+            intermediate_embeddings.append(h)
             for i, layer in enumerate(self.layers):
                 if i != 0:
                     h = self.dropout(h)
                 h = layer(graph, h)
-                intermediate_embedding.append()
+                intermediate_embedding = self.intermediate_layer[i](h)  # shape = (# nodes * num_out)
+                intermediate_embedding.append(intermediate_embedding)
+
+            concatenated_intermediate_features = torch.cat(intermediate_embeddings, dim=-1)
+            out = self.out_layer(concatenated_intermediate_features)
 
         else:
             h = features
@@ -49,7 +56,8 @@ class OurNetwork(nn.Module):
                 if i != 0:
                     h = self.dropout(h)
                 h = layer(graph, h)
-        return h
+            out = h
+        return out
 
 
 if __name__ == "__main__":
