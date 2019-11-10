@@ -4,7 +4,9 @@
     <list default="true" id="fe72474c-d158-4d71-bfb4-aff9b2b6bdbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Ours.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ours.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Ours_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Ours_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wandb/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wandb/run-20191110_113825-bv0vw1nm/wandb-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/run-20191110_113825-bv0vw1nm/wandb-metadata.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,15 +196,6 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -219,13 +212,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/Ours.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="1" />
+          <line>52</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/Ours.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
+          <line>61</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -84,5 +84,5 @@ class OurLayer(nn.Module):
             lin = self.linear_comb[nodes.nodes()].unsqueeze(1)
             out = (1 - lin) * msg + lin * hidden
         else:
-            out = msg.sum(1)
+            out = msg
         return {'out': out}

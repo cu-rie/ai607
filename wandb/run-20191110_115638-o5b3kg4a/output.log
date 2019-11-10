@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:/Users/kyuree/dev/ai601/train_ours.py", line 56, in <module>
+    loss = loss_ftn(logits[train_mask], labels[train_mask])
+IndexError: The shape of the mask [3327] at index 0does not match the shape of the indexed tensor [4, 6] at index 0

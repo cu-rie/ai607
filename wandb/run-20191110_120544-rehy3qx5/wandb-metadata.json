@@ -3,10 +3,10 @@
     "program": "C:/Users/kyuree/dev/ai601/train_ours.py",
     "git": {
         "remote": "https://github.com/cu-rie/ai607.git",
-        "commit": "c2eefc959738ce92e08fa4d1b583ea76fd71dcb7"
+        "commit": "cb0d318af5042603a50a88dc6dfe8c94f8cf7aaa"
     },
     "email": "ahnkjuree@gmail.com",
-    "startedAt": "2019-11-10T11:38:26.871766",
+    "startedAt": "2019-11-10T12:05:46.347785",
     "host": "DESKTOP-AL6I7CR",
     "username": "kyuree",
     "executable": "C:\\Users\\kyuree\\Anaconda3\\envs\\ai601_env\\python.exe",
@@ -19,5 +19,5 @@
     "mode": "run",
     "name": "DEBUG",
     "project": "gnnproject",
-    "heartbeatAt": "2019-11-10T11:41:09.769356"
+    "heartbeatAt": "2019-11-10T12:07:09.154017"
 }

@@ -10,17 +10,18 @@ class OurNetwork(nn.Module):
                  n_classes,
                  n_layers,
                  n_nodes,
-                 use_linear_comb=True,
+                 use_linear_comb=False,
                  use_intermediate_embedding=True,
                  activation=torch.relu,
                  dropout=0.5):
         super(OurNetwork, self).__init__()
         self.layers = nn.ModuleList()
+        self.num_layers = n_layers
         # input layer
         self.layers.append(
             OurLayer(input_dim, n_hidden, n_nodes, activation=activation, use_linear_comb=use_linear_comb))
         # hidden layers
-        for i in range(n_layers - 1):
+        for i in range(n_layers-1):
             self.layers.append(
                 OurLayer(n_hidden, n_hidden, n_nodes, activation=activation, use_linear_comb=use_linear_comb))
         # output layer
@@ -30,8 +31,8 @@ class OurNetwork(nn.Module):
         self.use_intermediate_embedding = use_intermediate_embedding
         if use_intermediate_embedding:
             self.intermediate_layer = nn.ModuleList()
-            self.intermediate_layer.append(nn.Linear(input_dim, n_classes))
-            for i in range(n_layers - 1):
+            # self.intermediate_layer.append(nn.Linear(input_dim, n_classes))
+            for i in range(n_layers):
                 self.intermediate_layer.append(nn.Linear(n_hidden, n_classes))
             self.out_layer = nn.Linear(n_layers+1, n_classes)
 
@@ -39,16 +40,17 @@ class OurNetwork(nn.Module):
         if self.use_intermediate_embedding:
             intermediate_embeddings = []
             h = features
-            intermediate_embeddings.append(h)
             for i, layer in enumerate(self.layers):
                 if i != 0:
                     h = self.dropout(h)
-                h = layer(graph, h)
-                intermediate_embedding = self.intermediate_layer[i](h)  # shape = (# nodes * num_out)
-                intermediate_embedding.append(intermediate_embedding)
+                h = layer(graph, h) # shape = (# nodes * hidden)
+                if i != self.num_layers:
+                    intermediate_embedding = self.intermediate_layer[i](h)  # shape = (# nodes * num_classes)
+                    intermediate_embeddings.append(intermediate_embedding)
 
-            concatenated_intermediate_features = torch.cat(intermediate_embeddings, dim=-1)
-            out = self.out_layer(concatenated_intermediate_features)
+            intermediate_embeddings.append(h)
+            stacked_intermediate_embeddings = torch.stack(intermediate_embeddings)
+            out = stacked_intermediate_embeddings.sum(0)
 
         else:
             h = features
