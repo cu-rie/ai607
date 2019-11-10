@@ -1,0 +1,24 @@
+{
+    "root": "C:/Users/kyuree/dev/ai601",
+    "program": "C:/Users/kyuree/dev/ai601/train_ours.py",
+    "git": {
+        "remote": "https://github.com/cu-rie/ai607.git",
+        "commit": "a1ac85dc2da549d964f5a8561bcbed6dad1db4ee"
+    },
+    "email": "ahnkjuree@gmail.com",
+    "startedAt": "2019-11-10T12:13:44.528007",
+    "host": "DESKTOP-AL6I7CR",
+    "username": "kyuree",
+    "executable": "C:\\Users\\kyuree\\Anaconda3\\envs\\ai601_env\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.5",
+    "cpu_count": 4,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "name": "Ours_citeseer_intermediate_embedding",
+    "project": "gnnproject",
+    "heartbeatAt": "2019-11-10T12:16:04.669929",
+    "exitcode": 0
+}

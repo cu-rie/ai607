@@ -12,9 +12,11 @@ if __name__ == "__main__":
     import wandb
     import dgl
 
-    exp_name = 'DEBUG'
-    # exp_name = 'Ours_citeseer'
+    # exp_name = 'DEBUG'
+    exp_name = 'Ours_citeseer_intermediate_embedding'
     data = load_citeseer()
+    use_intermediate_embedding = True
+    use_linear_comb = False
 
     graph = dgl.DGLGraph(data.graph)
     features = torch.Tensor(data.features)
@@ -30,7 +32,8 @@ if __name__ == "__main__":
     n_hidden = 64
     n_layers = 3
 
-    model = OurNetwork(input_dim, n_hidden, num_labels, n_layers, n_nodes=graph.number_of_nodes())
+    model = OurNetwork(input_dim, n_hidden, num_labels, n_layers, n_nodes=graph.number_of_nodes(),
+                       use_intermediate_embedding=use_intermediate_embedding, use_linear_comb=use_linear_comb)
 
     # train arguments
 
