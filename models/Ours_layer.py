@@ -10,8 +10,8 @@ class OurLayer(nn.Module):
                  in_feats,
                  out_feats,
                  n_nodes,
-                 use_linear_comb=True,
 
+                 use_linear_comb=True,
                  norm=True,
                  bias=True,
                  activation=None):
@@ -21,10 +21,9 @@ class OurLayer(nn.Module):
         self._norm = norm
         self.use_linear_comb = use_linear_comb
         if use_linear_comb:
-            if self._in_feats > self._out_feats:
-                self.linear_comb = nn.Parameter(torch.ones(n_nodes) * 0.5, requires_grad=True)
-            else:
-                self.linear_comb = nn.Parameter(torch.ones(n_nodes) * 0.5, requires_grad=True)
+            self.linear_comb = nn.Parameter(torch.ones(n_nodes) * 0.5, requires_grad=True)
+        else:
+            self.register_parameter('linear_comb', None)
 
         self.weight = nn.Parameter(torch.Tensor(in_feats, out_feats))
         if bias:
@@ -80,7 +79,7 @@ class OurLayer(nn.Module):
     def reduce_func(self, nodes):
         msg = nodes.mailbox['m'].sum(1)
         hidden = nodes.data['h']
-        if self.use_linear_comb:
+        if self.linear_comb is not None:
             lin = self.linear_comb[nodes.nodes()].unsqueeze(1)
             out = (1 - lin) * msg + lin * hidden
         else:

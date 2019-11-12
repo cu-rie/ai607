@@ -16,24 +16,25 @@ class OurNetwork(nn.Module):
                  hidden_activation=torch.relu,
                  out_activation=torch.relu,
                  dropout=0.5,
-                 ):
+                 num_heads=3):
         super(OurNetwork, self).__init__()
         self.layers = nn.ModuleList()
         self.num_layers = n_layers
-
         self.layers.append(
-            OurLayer(input_dim, n_hidden, n_nodes, activation=hidden_activation, use_linear_comb=use_linear_comb))
+            OurLayer_GAT(input_dim, n_hidden, n_nodes=n_nodes, num_heads=num_heads, activation=hidden_activation,
+                         use_linear_comb=use_linear_comb))
         for i in range(n_layers - 1):
             self.layers.append(
-                OurLayer(n_hidden, n_hidden, n_nodes, activation=hidden_activation,
-                         use_linear_comb=use_linear_comb))
+                OurLayer_GAT(n_hidden * num_heads, n_hidden, n_nodes=n_nodes, num_heads=num_heads,
+                             activation=hidden_activation, use_linear_comb=use_linear_comb))
         self.layers.append(
-            OurLayer(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
+            OurLayer_GAT(n_hidden * num_heads, n_classes, n_nodes=n_nodes, num_heads=num_heads,
+                         activation=out_activation, use_linear_comb=use_linear_comb))
 
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding
         if use_intermediate_embedding:
-            self.intermediate_layer = nn.Linear(n_hidden, n_classes)
+            self.intermediate_layer = nn.Linear(n_hidden * num_heads, n_classes)
             self.out_layer = nn.Linear(n_layers + 1, n_classes)
 
     def forward(self, graph, features):
@@ -45,10 +46,11 @@ class OurNetwork(nn.Module):
                     h = self.dropout(h)
                 h = layer(graph, h)  # shape = (# nodes * hidden)
                 if i != self.num_layers:
+                    h = h.flatten(1)
                     intermediate_embedding = self.intermediate_layer(h)  # shape = (# nodes * num_classes)
                     intermediate_embeddings.append(intermediate_embedding)
 
-            intermediate_embeddings.append(h)
+            intermediate_embeddings.append(h.sum(1))
             stacked_intermediate_embeddings = torch.stack(intermediate_embeddings)
             out = stacked_intermediate_embeddings.sum(0)
 
