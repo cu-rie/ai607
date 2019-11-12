@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "C:/Users/kyuree/dev/ai601/train.py", line 66, in <module>
-    logits = model(graph, features)
-  File "C:\Users\kyuree\Anaconda3\envs\ai601_env\lib\site-packages\torch\nn\modules\module.py", line 541, in __call__
-    result = self.forward(*input, **kwargs)
-  File "C:\Users\kyuree\dev\ai601\models\GAT.py", line 36, in forward
-    h = l(graph, h).flatten(1)
-TypeError: 'int' object is not callable

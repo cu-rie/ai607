@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe72474c-d158-4d71-bfb4-aff9b2b6bdbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/train_ours_gcn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurNetwork_GCN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours_GAT.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurNetwork_GAT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurLayer_GCN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours_layer_GAT.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurLayer_GAT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ours_gat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wandb/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/debug.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

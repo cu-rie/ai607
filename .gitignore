@@ -1,0 +1,47 @@
+# pycharm cache
+.idea/
+.vscode/
+Pipfile.lock
+
+# pytorch model
+*.ptb
+
+# python related
+__pycache__
+*.pyc
+
+# virtualenv related
+venv/
+
+# previous examples
+examples/prev/
+
+# pyenv file
+.python-version
+
+# jupyter related
+.ipynb_checkpoints/
+
+# package egg files
+
+# vs code related
+.DS_Store
+
+# output files
+outputs
+
+# model, result savefiles
+*.json
+*.png
+*.pt
+
+# log files
+*.log
+tests/memory_usage_log.txt
+
+# exp config
+.yaml
+
+# wandb
+ai601/*/wandb
+test/wandb
