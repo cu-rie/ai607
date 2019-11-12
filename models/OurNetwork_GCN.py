@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from models.OurLayer_GCN import OurLayer_GCN
+from models.layers.OurLayer_GCN import OurLayer_GCN
 
 
 class OurNetwork_GCN(nn.Module):

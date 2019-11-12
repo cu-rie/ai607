@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from models.graphconv import GraphConv
+from models.layers.graphconv import GraphConv
 
 
 class GCN(nn.Module):

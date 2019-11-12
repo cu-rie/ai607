@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from models.OurLayer_GAT import OurLayer_GAT
+from models.layers.OurLayer_GAT import OurLayer_GAT
 
 
 class OurNetwork_GAT(nn.Module):
