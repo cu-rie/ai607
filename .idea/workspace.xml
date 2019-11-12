@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe72474c-d158-4d71-bfb4-aff9b2b6bdbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Ours_GAT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Ours_layer_GAT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_ours_gcn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Ours.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Ours_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Ours_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurNetwork_GCN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Ours_GAT.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurNetwork_GAT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Ours_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurLayer_GCN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Ours_layer_GAT.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/OurLayer_GAT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ours.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ours_gat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wandb/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/wandb/debug.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +31,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kyuree\dev\ai601" />
       <recent name="C:\Users\kyuree\dev\ai601\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -51,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ours_GAT">
+  <component name="RunManager" selected="Python.train_ours_gat">
     <configuration name="Ours" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai601" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,7 +68,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/Ours.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\kyuree\dev\ai601\models\OurNetwork_GCN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +89,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/Ours_GAT.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\kyuree\dev\ai601\models\OurNetwork_GAT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,27 +119,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_gcn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ai601" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_gcn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="train_ours" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai601" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +131,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_ours.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\kyuree\dev\ai601\train_ours_gcn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_ours_gat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ai601" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_ours_gat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train_ours_gat" />
         <item itemvalue="Python.Ours_GAT" />
         <item itemvalue="Python.Ours" />
         <item itemvalue="Python.train_ours" />
         <item itemvalue="Python.train_gat" />
-        <item itemvalue="Python.train_gcn" />
       </list>
     </recent_temporary>
   </component>
@@ -195,18 +199,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/models/Ours_GAT.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/models/Ours_GAT.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

@@ -1,10 +1,9 @@
 import torch
 import torch.nn as nn
-from models.Ours_layer import OurLayer
-from models.Ours_layer_GAT import OurLayer_GAT
+from models.OurLayer_GCN import OurLayer_GCN
 
 
-class OurNetwork(nn.Module):
+class OurNetwork_GCN(nn.Module):
     def __init__(self,
                  input_dim,
                  n_hidden,
@@ -17,18 +16,18 @@ class OurNetwork(nn.Module):
                  out_activation=torch.relu,
                  dropout=0.5,
                  ):
-        super(OurNetwork, self).__init__()
+        super(OurNetwork_GCN, self).__init__()
         self.layers = nn.ModuleList()
         self.num_layers = n_layers
 
         self.layers.append(
-            OurLayer(input_dim, n_hidden, n_nodes, activation=hidden_activation, use_linear_comb=use_linear_comb))
+            OurLayer_GCN(input_dim, n_hidden, n_nodes, activation=hidden_activation, use_linear_comb=use_linear_comb))
         for i in range(n_layers - 1):
             self.layers.append(
-                OurLayer(n_hidden, n_hidden, n_nodes, activation=hidden_activation,
-                         use_linear_comb=use_linear_comb))
+                OurLayer_GCN(n_hidden, n_hidden, n_nodes, activation=hidden_activation,
+                             use_linear_comb=use_linear_comb))
         self.layers.append(
-            OurLayer(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
+            OurLayer_GCN(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
 
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding

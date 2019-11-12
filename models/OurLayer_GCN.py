@@ -5,7 +5,7 @@ from torch.nn import init
 import dgl.function as fn
 
 
-class OurLayer(nn.Module):
+class OurLayer_GCN(nn.Module):
     def __init__(self,
                  in_feats,
                  out_feats,
@@ -15,7 +15,7 @@ class OurLayer(nn.Module):
                  norm=True,
                  bias=True,
                  activation=None):
-        super(OurLayer, self).__init__()
+        super(OurLayer_GCN, self).__init__()
         self._in_feats = in_feats
         self._out_feats = out_feats
         self._norm = norm

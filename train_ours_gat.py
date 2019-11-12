@@ -2,7 +2,7 @@ import torch
 import argparse, time
 import numpy as np
 
-from models.Ours import OurNetwork
+from models.OurNetwork_GAT import OurNetwork_GAT
 from utils.train_utils import evaluate
 
 from dgl.data import load_data, register_data_args
@@ -31,9 +31,11 @@ if __name__ == "__main__":
     input_dim = features.shape[1]
     n_hidden = 64
     n_layers = 3
+    num_heads = 3
 
-    model = OurNetwork(input_dim, n_hidden, num_labels, n_layers, n_nodes=graph.number_of_nodes(),
-                       use_intermediate_embedding=use_intermediate_embedding, use_linear_comb=use_linear_comb)
+    model = OurNetwork_GAT(input_dim, n_hidden, num_labels, n_layers, n_nodes=graph.number_of_nodes(),
+                           num_heads=num_heads, use_intermediate_embedding=use_intermediate_embedding,
+                           use_linear_comb=use_linear_comb)
 
     # train arguments
 

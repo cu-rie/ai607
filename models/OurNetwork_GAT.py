@@ -1,10 +1,9 @@
 import torch
 import torch.nn as nn
-from models.Ours_layer import OurLayer
-from models.Ours_layer_GAT import OurLayer_GAT
+from models.OurLayer_GAT import OurLayer_GAT
 
 
-class OurNetwork(nn.Module):
+class OurNetwork_GAT(nn.Module):
     def __init__(self,
                  input_dim,
                  n_hidden,
@@ -17,7 +16,7 @@ class OurNetwork(nn.Module):
                  out_activation=torch.relu,
                  dropout=0.5,
                  num_heads=3):
-        super(OurNetwork, self).__init__()
+        super(OurNetwork_GAT, self).__init__()
         self.layers = nn.ModuleList()
         self.num_layers = n_layers
         self.layers.append(
