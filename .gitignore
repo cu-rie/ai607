@@ -45,3 +45,5 @@ tests/memory_usage_log.txt
 # wandb
 ai601/*/wandb
 test/wandb
+.wandb/
+models/wandb
