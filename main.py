@@ -13,7 +13,6 @@ from utils.train_utils import evaluate
 from dgl.data import load_data, register_data_args
 from dgl.data.citation_graph import load_cora, load_citeseer, load_pubmed, load_synthetic
 
-
 def main(args):
     print(args)
 
@@ -30,6 +29,17 @@ def main(args):
     ## Load dataset from args.data
     if args.data == 'citeseer':
         data = load_citeseer()
+    elif args.data == 'cora':
+        data = load_cora()
+    elif args.data == 'pubmed':
+        data = load_pubmed()
+    elif args.data == 'synthetic':
+        data = load_synthetic()
+    elif args.data in ['cornell', "texas", "washington", "wisconsin"]:
+        data = WebKBset(args.data)
+    else:
+        print('Please specify the name of dataset.')
+
 
     ## Load graph structure based on models. Especially different at GAT only.
     if args.model != 'GAT':
@@ -122,7 +132,7 @@ if __name__ == '__main__':
     # Hyper Parameters
     parser = argparse.ArgumentParser()
     parser.add_argument('--exp_name', default='1114', type=str)
-    parser.add_argument('--data', default='citeseer', help='cora, citeseer, pubmed, synthetic', type=str)
+    parser.add_argument('--data', default='citeseer', help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin', type=str)
     parser.add_argument('--use_intermediate_embedding', default=True, type=str)
     parser.add_argument('--use_linear_comb', default=False, type=str)
     parser.add_argument('--n_hidden', default=64, type=int)
