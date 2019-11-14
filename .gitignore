@@ -47,3 +47,5 @@ ai601/*/wandb
 test/wandb
 .wandb/
 models/wandb
+
+saved_model
