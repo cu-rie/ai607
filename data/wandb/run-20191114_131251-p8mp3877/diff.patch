@@ -1,0 +1,24 @@
+diff --git a/data/train_ours_gat_WebKB.py b/data/train_ours_gat_WebKB.py
+index 5401632..736931e 100644
+--- a/data/train_ours_gat_WebKB.py
++++ b/data/train_ours_gat_WebKB.py
+@@ -29,14 +29,14 @@ class WebKBset(object):
+         self._load()
+ 
+     def _load(self):
+-        idx_features_labels = np.genfromtxt("data/{}.content".format(self.name), dtype=np.dtype(str))
++        idx_features_labels = np.genfromtxt("{}.content".format(self.name), dtype=np.dtype(str))
+         features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
+         labels = _encode_onehot(idx_features_labels[:, -1])
+         self.num_labels = labels.shape[1]
+         # build graph
+         idx = np.array(idx_features_labels[:, 0], dtype=str)
+         idx_map = {j: i for i, j in enumerate(idx)}
+-        edges_unordered = np.genfromtxt("data/{}.cites".format(self.name), dtype=np.dtype(str))
++        edges_unordered = np.genfromtxt("{}.cites".format(self.name), dtype=np.dtype(str))
+         edges = np.array(list(map(idx_map.get, edges_unordered.flatten())),
+                          dtype=np.int32).reshape(edges_unordered.shape)
+         adj = sp.coo_matrix((np.ones(edges.shape[0]),
+diff --git a/models/__pycache__/OurNetwork_GAT.cpython-37.pyc b/models/__pycache__/OurNetwork_GAT.cpython-37.pyc
+index b30c0a9..91dace0 100644
+Binary files a/models/__pycache__/OurNetwork_GAT.cpython-37.pyc and b/models/__pycache__/OurNetwork_GAT.cpython-37.pyc differ
