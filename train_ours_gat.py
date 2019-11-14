@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     dur = []
 
-    wandb.init(project='gnnproject', name=exp_name)
+    wandb.init(project='gnnproject_ai607', name=exp_name)
     wandb.watch(model)
 
     n_edges = graph.number_of_edges()
