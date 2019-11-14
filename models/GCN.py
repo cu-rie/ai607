@@ -6,9 +6,9 @@ from models.layers.graphconv import GraphConv
 class GCN(nn.Module):
     def __init__(self,
                  input_dim,
-                 n_hidden,
-                 n_classes,
-                 n_layers,
+                 num_hidden,
+                 num_classes,
+                 num_layers,
                  activation=torch.relu,
                  dropout=0.):
         super(GCN, self).__init__()
