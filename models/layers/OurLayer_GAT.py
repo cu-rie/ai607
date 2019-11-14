@@ -33,7 +33,6 @@ class OurLayer_GAT(nn.Module):
         # self.attn_drop = nn.Dropout(attn_drop)
         self.leaky_relu = nn.LeakyReLU(0.2)
         self.reset_parameters()
-
         self._activation = activation
 
     def reset_parameters(self):

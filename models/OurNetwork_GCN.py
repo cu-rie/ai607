@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from models.layers.OurLayer_GCN import OurLayer_GCN
-
+import torch.nn.functional as F
 
 class OurNetwork_GCN(nn.Module):
     def __init__(self,
@@ -10,6 +10,7 @@ class OurNetwork_GCN(nn.Module):
                  n_classes,
                  n_layers,
                  n_nodes,
+                 pooling_opt,
                  use_linear_comb=False,
                  use_intermediate_embedding=True,
                  hidden_activation=torch.relu,
@@ -19,21 +20,24 @@ class OurNetwork_GCN(nn.Module):
         super(OurNetwork_GCN, self).__init__()
         self.layers = nn.ModuleList()
         self.num_layers = n_layers
-
+        self.n_hidden = n_hidden
+        self.pooling_opt = pooling_opt
+        if self.pooling_opt == 2:
+            self.attention_layer = nn.Linear(n_hidden, 1)
         self.layers.append(
             OurLayer_GCN(input_dim, n_hidden, n_nodes, activation=hidden_activation, use_linear_comb=use_linear_comb))
-        for i in range(n_layers - 1):
+        for i in range(n_layers):
             self.layers.append(
                 OurLayer_GCN(n_hidden, n_hidden, n_nodes, activation=hidden_activation,
                              use_linear_comb=use_linear_comb))
-        self.layers.append(
-            OurLayer_GCN(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
+        # self.layers.append(
+        #     OurLayer_GCN(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
 
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding
         if use_intermediate_embedding:
-            self.intermediate_layer = nn.Linear(n_hidden, n_classes)
-            self.out_layer = nn.Linear(n_layers + 1, n_classes)
+            self.output_layer = nn.Linear(n_hidden, n_classes)
+            #self.out_layer = nn.Linear(n_layers + 1, n_classes)
 
     def forward(self, graph, features):
         if self.use_intermediate_embedding:
@@ -42,22 +46,29 @@ class OurNetwork_GCN(nn.Module):
             for i, layer in enumerate(self.layers):
                 if i != 0:
                     h = self.dropout(h)
-                h = layer(graph, h)  # shape = (# nodes * hidden)
-                if i != self.num_layers:
-                    intermediate_embedding = self.intermediate_layer(h)  # shape = (# nodes * num_classes)
-                    intermediate_embeddings.append(intermediate_embedding)
+                h = layer(graph, h)  # shape = (# nodes, hidden)
+                intermediate_embeddings.append(h)
 
-            intermediate_embeddings.append(h)
             stacked_intermediate_embeddings = torch.stack(intermediate_embeddings)
-            out = stacked_intermediate_embeddings.sum(0)
-
+            if self.pooling_opt == 0: ##avg
+                pooled_h = torch.mean(stacked_intermediate_embeddings, 0)
+            elif self.pooling_opt == 1: ##max
+                pooled_h, _ = torch.max(stacked_intermediate_embeddings, 0)
+            elif self.pooling_opt == 2:  ##attention
+                attention = F.softmax(self.attention_layer(stacked_intermediate_embeddings), 0).repeat(1, 1,self.n_hidden)
+                pooled_h = torch.sum(torch.mul(stacked_intermediate_embeddings, attention), 0)
+            elif self.pooling_opt == 3: ##sum
+                pooled_h = torch.sum(stacked_intermediate_embeddings, 0)
+            else:
+                print('please check your pooling option. No options now.')
+            out = self.output_layer(pooled_h)
         else:
             h = features
             for i, layer in enumerate(self.layers):
                 if i != 0:
                     h = self.dropout(h)
                 h = layer(graph, h)
-            out = h
+            out = self.output_layer(h)
         return out
 
 

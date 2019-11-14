@@ -62,10 +62,10 @@ def main(args):
     ## Specify Models
     if args.model_category == 'ours':
         if args.model == 'GAT':
-            model = OurNetwork_GAT(input_dim, args.n_hidden, num_labels, args.n_layers, n_nodes=graph.number_of_nodes(),
+            model = OurNetwork_GAT(input_dim, args.n_hidden, num_labels, args.n_layers, pooling_opt=args.pooling_opt, n_nodes=graph.number_of_nodes(),
                                    num_heads=args.num_heads, use_intermediate_embedding=True, use_linear_comb=False)
         elif args.model == 'GCN':
-            model = OurNetwork_GCN(input_dim, args.n_hidden, num_labels, args.n_layers, n_nodes=graph.number_of_nodes(),
+            model = OurNetwork_GCN(input_dim, args.n_hidden, num_labels, args.n_layers, pooling_opt=args.pooling_opt, n_nodes=graph.number_of_nodes(),
                                    use_intermediate_embedding=True, use_linear_comb=False)
         else:
             print('We dont have any other model:(')
@@ -143,8 +143,9 @@ if __name__ == '__main__':
     parser.add_argument('--disp', default=3, type=int)
     parser.add_argument('--saved_dir', default='saved_model', type=str)
     parser.add_argument('--patience', default=20, type=int)
-    parser.add_argument('--model_category', default='base', help='ours, base', type=str)
-    parser.add_argument('--model', default='GAT', help='GAT, GCN', type=str)
+    parser.add_argument('--model_category', default='ours', help='ours, base', type=str)
+    parser.add_argument('--model', default='GCN', help='GAT, GCN', type=str)
+    parser.add_argument('--pooling_opt', default=2, help='0:avg,1:max,2:attention,3:sum', type=int)
     args = parser.parse_args()
 
     main(args)
