@@ -66,11 +66,11 @@ def main(args):
         if args.model == 'GAT':
             model = OurNetwork_GAT(input_dim, args.n_hidden, num_labels, args.n_layers, pooling_opt=args.pooling_opt,
                                    n_nodes=graph.number_of_nodes(),
-                                   num_heads=args.num_heads, use_intermediate_embedding=True, use_linear_comb=False)
+                                   num_heads=args.num_heads, use_intermediate_embedding=1, use_linear_comb=0)
         elif args.model == 'GCN':
             model = OurNetwork_GCN(input_dim, args.n_hidden, num_labels, args.n_layers, pooling_opt=args.pooling_opt,
                                    n_nodes=graph.number_of_nodes(),
-                                   use_intermediate_embedding=True, use_linear_comb=False)
+                                   use_intermediate_embedding=1, use_linear_comb=0)
         else:
             print('We dont have any other model:(')
     else:
@@ -147,8 +147,8 @@ if __name__ == '__main__':
     parser.add_argument('--exp_name', default='1114', type=str)
     parser.add_argument('--data', default='cornell',
                         help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin', type=str)
-    parser.add_argument('--use_intermediate_embedding', default=True, type=str)
-    parser.add_argument('--use_linear_comb', default=False, type=str)
+    parser.add_argument('--use_intermediate_embedding', default=1, type=str)
+    parser.add_argument('--use_linear_comb', default=0, type=str)
     parser.add_argument('--n_hidden', default=64, type=int)
     parser.add_argument('--n_layers', default=3, type=int)
     parser.add_argument('--num_heads', default=3, type=int)
