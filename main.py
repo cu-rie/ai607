@@ -130,9 +130,9 @@ def main(args):
             bad_cnt = 0
         else:
             bad_cnt += 1
-        if bad_cnt > args.patience:
-            print('Early Stopped!')
-            # break
+        # if bad_cnt > args.patience:
+        #     print('Early Stopped!')
+        #     # break
 
     ## load the best model and test.
     model_loaded = torch.load(os.path.join(saved_exp_dir, str(max_epoch) + '_model.pth'))
