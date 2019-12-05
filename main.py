@@ -22,7 +22,7 @@ def main(args):
         os.mkdir(args.result)
 
     ## We define experiment name as below :
-    exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data, args.use_intermediate_embedding, args.use_linear_comb, args.n_hidden, args.num_repeats)
+    exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (args.exp_name, args.data, args.model_category, args.model, args.use_intermediate_embedding, args.use_linear_comb, args.n_hidden, args.num_repeats)
     # exp_name = '%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data)
 
     ## Make a directory for saving models.
@@ -141,7 +141,7 @@ def main(args):
     print('Final Test Accuracy : %.4f' % test_acc)
 
     out = np.array(writer)
-    result_saved_dir = os.path.join(args.result, "{}_testacc{}.csv".format(exp_name, test_acc))
+    result_saved_dir = os.path.join(args.result, '%s_testacc_%.4f.csv' % (exp_name, test_acc))
     pd.DataFrame(out).to_csv(result_saved_dir)
 
 if __name__ == '__main__':
