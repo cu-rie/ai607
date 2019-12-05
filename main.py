@@ -19,7 +19,7 @@ def main(args):
     print(args)
 
     ## We define experiment name as below :
-    exp_name = '%s_%s_%s_%s_%s_%s' % (args.model_category, args.model, args.data, args.use_intermediate_embedding, args.use_linear_comb, args.num_repeats)
+    exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data, args.use_intermediate_embedding, args.use_linear_comb, args.n_hidden, args.num_repeats)
     # exp_name = '%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data)
 
     ## Make a directory for saving models.
@@ -144,7 +144,7 @@ def main(args):
 if __name__ == '__main__':
     # Hyper Parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_name', default='1114', type=str)
+    parser.add_argument('--exp_name', default='1205', type=str)
     parser.add_argument('--data', default='cornell',
                         help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin', type=str)
     parser.add_argument('--use_intermediate_embedding', default=1, type=str)
