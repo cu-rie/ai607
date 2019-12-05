@@ -11,7 +11,7 @@ class OurLayer_GCN(nn.Module):
                  out_feats,
                  n_nodes,
 
-                 use_linear_comb=True,
+                 use_linear_comb=1,
                  norm=True,
                  bias=True,
                  activation=None):
@@ -20,7 +20,7 @@ class OurLayer_GCN(nn.Module):
         self._out_feats = out_feats
         self._norm = norm
         self.use_linear_comb = use_linear_comb
-        if use_linear_comb:
+        if use_linear_comb==1:
             self.linear_comb = nn.Parameter(torch.ones(n_nodes) * 0.5, requires_grad=True)
         else:
             self.register_parameter('linear_comb', None)

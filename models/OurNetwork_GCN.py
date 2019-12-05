@@ -11,8 +11,8 @@ class OurNetwork_GCN(nn.Module):
                  n_layers,
                  n_nodes,
                  pooling_opt,
-                 use_linear_comb=False,
-                 use_intermediate_embedding=True,
+                 use_linear_comb=0,
+                 use_intermediate_embedding=1,
                  hidden_activation=torch.relu,
                  out_activation=torch.relu,
                  dropout=0.5,
@@ -35,12 +35,12 @@ class OurNetwork_GCN(nn.Module):
 
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding
-        if use_intermediate_embedding:
+        if use_intermediate_embedding==1:
             self.output_layer = nn.Linear(n_hidden, n_classes)
             #self.out_layer = nn.Linear(n_layers + 1, n_classes)
 
     def forward(self, graph, features):
-        if self.use_intermediate_embedding:
+        if self.use_intermediate_embedding==1:
             intermediate_embeddings = []
             h = features
             for i, layer in enumerate(self.layers):
