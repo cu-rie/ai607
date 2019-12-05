@@ -1,5 +1,5 @@
 # pycharm cache
-.idea/
+.idea/*
 .vscode/
 Pipfile.lock
 
@@ -49,3 +49,4 @@ test/wandb
 models/wandb
 
 models/__pycache__
+utils/__pycache__

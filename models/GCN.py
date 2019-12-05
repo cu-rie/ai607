@@ -14,12 +14,12 @@ class GCN(nn.Module):
         super(GCN, self).__init__()
         self.layers = nn.ModuleList()
         # input layer
-        self.layers.append(GraphConv(input_dim, n_hidden, activation=activation))
+        self.layers.append(GraphConv(input_dim, num_hidden, activation=activation))
         # hidden layers
-        for i in range(n_layers - 1):
-            self.layers.append(GraphConv(n_hidden, n_hidden, activation=activation))
+        for i in range(num_layers - 1):
+            self.layers.append(GraphConv(num_hidden, num_hidden, activation=activation))
         # output layer
-        self.layers.append(GraphConv(n_hidden, n_classes))
+        self.layers.append(GraphConv(num_hidden, num_classes))
         self.dropout = nn.Dropout(p=dropout)
 
     def forward(self, graph, features):

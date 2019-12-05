@@ -59,12 +59,14 @@ class WebKBset(object):
     def __len__(self):
         return 1
 
+    @staticmethod
     def _sample_mask(idx, l):
         """Create mask."""
         mask = np.zeros(l)
         mask[idx] = 1
         return mask
 
+    @staticmethod
     def _normalize(mx):
         """Row-normalize sparse matrix"""
         rowsum = np.array(mx.sum(1))
@@ -74,6 +76,7 @@ class WebKBset(object):
         mx = r_mat_inv.dot(mx)
         return mx
 
+    @staticmethod
     def _encode_onehot(labels):
         classes = list(sorted(set(labels)))
         classes_dict = {c: np.identity(len(classes))[i, :] for i, c in
@@ -82,16 +85,16 @@ class WebKBset(object):
                                  dtype=np.int32)
         return labels_onehot
 
-
-def evaluate(model, graph, features, labels, mask):
-    model.eval()
-    with torch.no_grad():
-        logits = model(graph, features)
-        logits = logits[mask]
-        labels = labels[mask]
-        _, indices = torch.max(logits, dim=1)
-        correct = torch.sum(indices == labels)
-        return correct.item() * 1.0 / len(labels)
+    @staticmethod
+    def evaluate(model, graph, features, labels, mask):
+        model.eval()
+        with torch.no_grad():
+            logits = model(graph, features)
+            logits = logits[mask]
+            labels = labels[mask]
+            _, indices = torch.max(logits, dim=1)
+            correct = torch.sum(indices == labels)
+            return correct.item() * 1.0 / len(labels)
 
 
 if __name__ == "__main__":
