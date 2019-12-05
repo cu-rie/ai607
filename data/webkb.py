@@ -18,14 +18,14 @@ class WebKBset(object):
         self._load()
 
     def _load(self):
-        idx_features_labels = np.genfromtxt("{}.content".format(self.name), dtype=np.dtype(str))
+        idx_features_labels = np.genfromtxt("data/{}.content".format(self.name), dtype=np.dtype(str))
         features = sp.csr_matrix(idx_features_labels[:, 1:-1], dtype=np.float32)
         labels = self._encode_onehot(idx_features_labels[:, -1])
         self.num_labels = labels.shape[1]
         # build graph
         idx = np.array(idx_features_labels[:, 0], dtype=str)
         idx_map = {j: i for i, j in enumerate(idx)}
-        edges_unordered = np.genfromtxt("{}.cites".format(self.name), dtype=np.dtype(str))
+        edges_unordered = np.genfromtxt("data/{}.cites".format(self.name), dtype=np.dtype(str))
         edges = np.array(list(map(idx_map.get, edges_unordered.flatten())),
                          dtype=np.int32).reshape(edges_unordered.shape)
         adj = sp.coo_matrix((np.ones(edges.shape[0]),
