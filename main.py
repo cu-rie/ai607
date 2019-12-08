@@ -130,14 +130,10 @@ def main(args):
             bad_cnt = 0
         else:
             bad_cnt += 1
-        # if bad_cnt > args.patience:
-        #     print('Early Stopped!')
-        #     # break
 
     ## load the best model and test.
     model_loaded = torch.load(os.path.join(saved_exp_dir, str(max_epoch) + '_model.pth'))
     test_acc = evaluate(model_loaded, graph, features, labels, test_mask)
-    # wandb.log({'test_acc': test_acc})
     print('Final Test Accuracy : %.4f' % test_acc)
 
     out = np.array(writer)
@@ -148,25 +144,53 @@ def main(args):
 if __name__ == '__main__':
     # Hyper Parameters
 
-    datasets = ["citeseer"]
-    # model_cateory = ['ours', 'base']
-    model_cateory = ['ours']
+    datasets = ["citeseer", 'texas']
+    model_cateory = ['ours', 'base']
     use_intermediate_embedding = [0, 1]
     use_linear_combs = [0, 1]
-    # n_hiddens = [64, 128, 256]
-    num_repeats_list = [0, 1, 2]
+    n_hiddens = [64, 128, 256]
+    num_repeats_list = [0, 1, 2, 3, 4]
     models = ['GAT', 'GCN']
+
     for data in datasets:
-        if data == 'texas':
+        if data in ['cornell', "texas", "washington", "wisconsin"]:
             hidden = 64
         else:
             hidden = 128
-
         for cat in model_cateory:
             if cat == 'base':
-                inter = 0
+                for inter in use_intermediate_embedding:
+                    for lin in use_linear_combs:
+                        for rep in num_repeats_list:
+                            for mod in models:
+                                parser = argparse.ArgumentParser()
+                                parser.add_argument('--exp_name', default='1206', type=str)
+                                parser.add_argument('--result', default='D:/Results_csv', type=str)
+                                parser.add_argument('--data', default=data,
+                                                    help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
+                                                    type=str)
+                                parser.add_argument('--use_intermediate_embedding', default=inter, type=str)
+                                parser.add_argument('--use_linear_comb', default=lin, type=str)
+                                parser.add_argument('--n_hidden', default=hidden, type=int)
+                                parser.add_argument('--n_layers', default=3, type=int)
+                                parser.add_argument('--num_heads', default=3, type=int)
+                                parser.add_argument('--lr', default=1e-3, type=float)
+                                parser.add_argument('--n_epochs', default=200, type=int)
+                                parser.add_argument('--disp', default=3, type=int)
+                                parser.add_argument('--saved_dir', default='D:/saved_model', type=str)
+                                parser.add_argument('--patience', default=20, type=int)
+                                parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
+                                parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
+                                parser.add_argument('--pooling_opt', default=2, help='0:avg,1:max,2:attention,3:sum',
+                                                    type=int)
+                                parser.add_argument('--num_repeats', default=rep, type=int)
+                                args = parser.parse_args()
+
+                                main(args)
+
+            else:
+                inter = 1
                 lin = 1
-                # for hidden in n_hiddens:
                 for rep in num_repeats_list:
                     for mod in models:
                         parser = argparse.ArgumentParser()
@@ -193,35 +217,4 @@ if __name__ == '__main__':
                         args = parser.parse_args()
 
                         main(args)
-            else:
-                # inter = 1
-                # lin = 0
-                for inter in use_intermediate_embedding:
-                    for lin in use_linear_combs:
-                        for rep in num_repeats_list:
-                            for mod in models:
-                                parser = argparse.ArgumentParser()
-                                parser.add_argument('--exp_name', default='1206', type=str)
-                                parser.add_argument('--result', default='D:/Results_csv', type=str)
-                                parser.add_argument('--data', default=data,
-                                                    help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
-                                                    type=str)
-                                parser.add_argument('--use_intermediate_embedding', default=inter, type=str)
-                                parser.add_argument('--use_linear_comb', default=lin, type=str)
-                                parser.add_argument('--n_hidden', default=hidden, type=int)
-                                parser.add_argument('--n_layers', default=3, type=int)
-                                parser.add_argument('--num_heads', default=3, type=int)
-                                parser.add_argument('--lr', default=1e-3, type=float)
-                                parser.add_argument('--n_epochs', default=200, type=int)
-                                parser.add_argument('--disp', default=3, type=int)
-                                parser.add_argument('--saved_dir', default='D:/saved_model', type=str)
-                                parser.add_argument('--patience', default=20, type=int)
-                                parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
-                                parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
-                                parser.add_argument('--pooling_opt', default=2,
-                                                    help='0:avg,1:max,2:attention,3:sum',
-                                                    type=int)
-                                parser.add_argument('--num_repeats', default=rep, type=int)
-                                args = parser.parse_args()
 
-                                main(args)
