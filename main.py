@@ -15,6 +15,7 @@ from dgl.data import load_data, register_data_args
 from dgl.data.citation_graph import load_cora, load_citeseer, load_pubmed, load_synthetic
 import pandas as pd
 
+
 def main(args):
     print(args)
 
@@ -22,7 +23,10 @@ def main(args):
         os.mkdir(args.result)
 
     ## We define experiment name as below :
-    exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (args.exp_name, args.data, args.model_category, args.model, args.use_intermediate_embedding, args.use_linear_comb, args.n_hidden, args.num_repeats)
+    exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (
+        args.exp_name, args.data, args.model_category, args.model, args.use_intermediate_embedding,
+        args.use_linear_comb,
+        args.n_hidden, args.num_repeats)
     # exp_name = '%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data)
 
     ## Make a directory for saving models.
@@ -89,12 +93,6 @@ def main(args):
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 
     dur = []
-    # wandb.init(project='ai607_re', name=exp_name)
-    # wandb.watch(model)
-    # wandb.log({'category': args.model_category,
-    #            'model': args.model,
-    #            'data': args.data
-    #            })
 
     print('Training Starts !')
     bad_cnt, max_dev = 0, 0
@@ -144,27 +142,83 @@ def main(args):
     result_saved_dir = os.path.join(args.result, '%s_testacc_%.4f.csv' % (exp_name, test_acc))
     pd.DataFrame(out).to_csv(result_saved_dir)
 
+
 if __name__ == '__main__':
     # Hyper Parameters
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_name', default='1205', type=str)
-    parser.add_argument('--result', default='Results_csv', type=str)
-    parser.add_argument('--data', default='cora',
-                        help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin', type=str)
-    parser.add_argument('--use_intermediate_embedding', default=1, type=str)
-    parser.add_argument('--use_linear_comb', default=0, type=str)
-    parser.add_argument('--n_hidden', default=64, type=int)
-    parser.add_argument('--n_layers', default=3, type=int)
-    parser.add_argument('--num_heads', default=3, type=int)
-    parser.add_argument('--lr', default=1e-3, type=float)
-    parser.add_argument('--n_epochs', default=200, type=int)
-    parser.add_argument('--disp', default=3, type=int)
-    parser.add_argument('--saved_dir', default='saved_model', type=str)
-    parser.add_argument('--patience', default=20, type=int)
-    parser.add_argument('--model_category', default='base', help='ours, base', type=str)
-    parser.add_argument('--model', default='GAT', help='GAT, GCN', type=str)
-    parser.add_argument('--pooling_opt', default=2, help='0:avg,1:max,2:attention,3:sum', type=int)
-    parser.add_argument('--num_repeats', default=1, type=int)
-    args = parser.parse_args()
 
-    main(args)
+    datasets = ["texas", 'citeseer']
+    model_cateory = ['ours', 'base']
+    use_intermediate_embedding = [0, 1]
+    use_linear_combs = [0, 1]
+    # n_hiddens = [64, 128, 256]
+    num_repeats_list = [0, 1, 2]
+    models = ['GAT', 'GCN']
+    for data in datasets:
+        if data == 'texas':
+            hidden = 64
+        else:
+            hidden = 128
+
+        for cat in model_cateory:
+            if cat == 'base':
+                inter = 0
+                lin = 1
+                # for hidden in n_hiddens:
+                for rep in num_repeats_list:
+                    for mod in models:
+                        parser = argparse.ArgumentParser()
+                        parser.add_argument('--exp_name', default='1206', type=str)
+                        parser.add_argument('--result', default='Results_csv', type=str)
+                        parser.add_argument('--data', default=data,
+                                            help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
+                                            type=str)
+                        parser.add_argument('--use_intermediate_embedding', default=inter, type=str)
+                        parser.add_argument('--use_linear_comb', default=lin, type=str)
+                        parser.add_argument('--n_hidden', default=hidden, type=int)
+                        parser.add_argument('--n_layers', default=3, type=int)
+                        parser.add_argument('--num_heads', default=3, type=int)
+                        parser.add_argument('--lr', default=1e-3, type=float)
+                        parser.add_argument('--n_epochs', default=200, type=int)
+                        parser.add_argument('--disp', default=3, type=int)
+                        parser.add_argument('--saved_dir', default='saved_model', type=str)
+                        parser.add_argument('--patience', default=20, type=int)
+                        parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
+                        parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
+                        parser.add_argument('--pooling_opt', default=2, help='0:avg,1:max,2:attention,3:sum',
+                                            type=int)
+                        parser.add_argument('--num_repeats', default=rep, type=int)
+                        args = parser.parse_args()
+
+                        main(args)
+            else:
+                inter = 1
+                lin = 0
+                # for inter in use_intermediate_embedding:
+                # for lin in use_linear_combs:
+                for rep in num_repeats_list:
+                    for mod in models:
+                        parser = argparse.ArgumentParser()
+                        parser.add_argument('--exp_name', default='1206', type=str)
+                        parser.add_argument('--result', default='D:/Results_csv', type=str)
+                        parser.add_argument('--data', default=data,
+                                            help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
+                                            type=str)
+                        parser.add_argument('--use_intermediate_embedding', default=inter, type=str)
+                        parser.add_argument('--use_linear_comb', default=lin, type=str)
+                        parser.add_argument('--n_hidden', default=hidden, type=int)
+                        parser.add_argument('--n_layers', default=3, type=int)
+                        parser.add_argument('--num_heads', default=3, type=int)
+                        parser.add_argument('--lr', default=1e-3, type=float)
+                        parser.add_argument('--n_epochs', default=200, type=int)
+                        parser.add_argument('--disp', default=3, type=int)
+                        parser.add_argument('--saved_dir', default='D:/saved_model', type=str)
+                        parser.add_argument('--patience', default=20, type=int)
+                        parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
+                        parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
+                        parser.add_argument('--pooling_opt', default=2,
+                                            help='0:avg,1:max,2:attention,3:sum',
+                                            type=int)
+                        parser.add_argument('--num_repeats', default=rep, type=int)
+                        args = parser.parse_args()
+
+                        main(args)
