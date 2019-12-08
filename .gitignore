@@ -50,3 +50,8 @@ models/wandb
 
 models/__pycache__
 utils/__pycache__
+
+*.csv
+*.pth
+saved_model/
+Results_csv/

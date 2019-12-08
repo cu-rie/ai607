@@ -3,6 +3,7 @@ import torch.nn as nn
 from models.layers.OurLayer_GCN import OurLayer_GCN
 import torch.nn.functional as F
 
+
 class OurNetwork_GCN(nn.Module):
     def __init__(self,
                  input_dim,
@@ -30,17 +31,13 @@ class OurNetwork_GCN(nn.Module):
             self.layers.append(
                 OurLayer_GCN(n_hidden, n_hidden, n_nodes, activation=hidden_activation,
                              use_linear_comb=use_linear_comb))
-        # self.layers.append(
-        #     OurLayer_GCN(n_hidden, n_classes, n_nodes, activation=out_activation, use_linear_comb=use_linear_comb))
-
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding
-        if use_intermediate_embedding==1:
+        if use_intermediate_embedding == 1:
             self.output_layer = nn.Linear(n_hidden, n_classes)
-            #self.out_layer = nn.Linear(n_layers + 1, n_classes)
 
     def forward(self, graph, features):
-        if self.use_intermediate_embedding==1:
+        if self.use_intermediate_embedding == 1:
             intermediate_embeddings = []
             h = features
             for i, layer in enumerate(self.layers):
@@ -50,14 +47,15 @@ class OurNetwork_GCN(nn.Module):
                 intermediate_embeddings.append(h)
 
             stacked_intermediate_embeddings = torch.stack(intermediate_embeddings)
-            if self.pooling_opt == 0: ##avg
+            if self.pooling_opt == 0:  ##avg
                 pooled_h = torch.mean(stacked_intermediate_embeddings, 0)
-            elif self.pooling_opt == 1: ##max
+            elif self.pooling_opt == 1:  ##max
                 pooled_h, _ = torch.max(stacked_intermediate_embeddings, 0)
             elif self.pooling_opt == 2:  ##attention
-                attention = F.softmax(self.attention_layer(stacked_intermediate_embeddings), 0).repeat(1, 1,self.n_hidden)
+                attention = F.softmax(self.attention_layer(stacked_intermediate_embeddings), 0).repeat(1, 1,
+                                                                                                       self.n_hidden)
                 pooled_h = torch.sum(torch.mul(stacked_intermediate_embeddings, attention), 0)
-            elif self.pooling_opt == 3: ##sum
+            elif self.pooling_opt == 3:  ##sum
                 pooled_h = torch.sum(stacked_intermediate_embeddings, 0)
             else:
                 print('please check your pooling option. No options now.')
