@@ -21,7 +21,15 @@ def main(args):
 
     if not os.path.exists(args.result):
         os.mkdir(args.result)
-
+    result_folder_dir = os.path.join(args.result, args.exp_name)
+    if not os.path.exists(result_folder_dir):
+        os.mkdir(result_folder_dir)
+    ## Make a directory for saving models.
+    if not os.path.exists(args.saved_dir):
+        os.mkdir(args.saved_dir)
+    saved_folder_dir = os.path.join(args.saved_dir, args.exp_name)
+    if not os.path.exists(saved_folder_dir):
+        os.mkdir(saved_folder_dir)
     ## We define experiment name as below :
     exp_name = '%s_%s_%s_%s_%s_%s_%s_%s' % (
         args.exp_name, args.data, args.model_category, args.model, args.use_intermediate_embedding,
@@ -29,10 +37,8 @@ def main(args):
         args.n_hidden, args.num_repeats)
     # exp_name = '%s_%s_%s_%s' % (args.exp_name, args.model_category, args.model, args.data)
 
-    ## Make a directory for saving models.
-    if not os.path.exists(args.saved_dir):
-        os.mkdir(args.saved_dir)
-    saved_exp_dir = os.path.join(args.saved_dir, exp_name)
+
+    saved_exp_dir = os.path.join(saved_folder_dir, exp_name)
     if not os.path.exists(saved_exp_dir):
         os.mkdir(saved_exp_dir)
 
@@ -137,7 +143,7 @@ def main(args):
     print('Final Test Accuracy : %.4f' % test_acc)
 
     out = np.array(writer)
-    result_saved_dir = os.path.join(args.result, '%s_testacc_%.4f.csv' % (exp_name, test_acc))
+    result_saved_dir = os.path.join(result_folder_dir, '%s_testacc_%.4f.csv' % (exp_name, test_acc))
     pd.DataFrame(out).to_csv(result_saved_dir)
 
 
@@ -164,8 +170,8 @@ if __name__ == '__main__':
                         for rep in num_repeats_list:
                             for mod in models:
                                 parser = argparse.ArgumentParser()
-                                parser.add_argument('--exp_name', default='1206', type=str)
-                                parser.add_argument('--result', default='D:/Results_csv', type=str)
+                                parser.add_argument('--exp_name', default='1209', type=str)
+                                parser.add_argument('--result', default='Results_csv', type=str)
                                 parser.add_argument('--data', default=data,
                                                     help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
                                                     type=str)
@@ -177,7 +183,7 @@ if __name__ == '__main__':
                                 parser.add_argument('--lr', default=1e-3, type=float)
                                 parser.add_argument('--n_epochs', default=200, type=int)
                                 parser.add_argument('--disp', default=3, type=int)
-                                parser.add_argument('--saved_dir', default='D:/saved_model', type=str)
+                                parser.add_argument('--saved_dir', default='saved_model', type=str)
                                 parser.add_argument('--patience', default=20, type=int)
                                 parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
                                 parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
@@ -194,8 +200,8 @@ if __name__ == '__main__':
                 for rep in num_repeats_list:
                     for mod in models:
                         parser = argparse.ArgumentParser()
-                        parser.add_argument('--exp_name', default='1206', type=str)
-                        parser.add_argument('--result', default='D:/Results_csv', type=str)
+                        parser.add_argument('--exp_name', default='1209', type=str)
+                        parser.add_argument('--result', default='Results_csv', type=str)
                         parser.add_argument('--data', default=data,
                                             help='cora, citeseer, pubmed, synthetic, cornell, texas, washington, wisconsin',
                                             type=str)
@@ -207,7 +213,7 @@ if __name__ == '__main__':
                         parser.add_argument('--lr', default=1e-3, type=float)
                         parser.add_argument('--n_epochs', default=200, type=int)
                         parser.add_argument('--disp', default=3, type=int)
-                        parser.add_argument('--saved_dir', default='D:/saved_model', type=str)
+                        parser.add_argument('--saved_dir', default='saved_model', type=str)
                         parser.add_argument('--patience', default=20, type=int)
                         parser.add_argument('--model_category', default=cat, help='ours, base', type=str)
                         parser.add_argument('--model', default=mod, help='GAT, GCN', type=str)
