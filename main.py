@@ -145,12 +145,13 @@ def main(args):
     out = np.array(writer)
     result_saved_dir = os.path.join(result_folder_dir, '%s_testacc_%.4f.csv' % (exp_name, test_acc))
     pd.DataFrame(out).to_csv(result_saved_dir)
+    del model, model_loaded
 
 
 if __name__ == '__main__':
     # Hyper Parameters
 
-    datasets = ["citeseer", 'texas']
+    datasets = ["cora", 'cornell']
     model_cateory = ['ours', 'base']
     use_intermediate_embedding = [0, 1]
     use_linear_combs = [0, 1]
