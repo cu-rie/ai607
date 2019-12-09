@@ -20,7 +20,7 @@ class OurLayer_GAT(nn.Module):
         self._out_feats = out_feats
         self._num_heads = num_heads
         self.use_linear_comb = use_linear_comb
-        if use_linear_comb==1:
+        if use_linear_comb == 1:
             if self._in_feats > self._out_feats:
                 self.linear_comb = nn.Parameter(torch.ones(n_nodes) * 0.5, requires_grad=True)
             else:
@@ -69,8 +69,8 @@ class OurLayer_GAT(nn.Module):
     def reduce_func(self, nodes):
         msg = nodes.mailbox['m'].sum(1)
         hidden = nodes.data['ft']
-        if self.use_linear_comb==1:
-            lin = self.linear_comb[nodes.nodes()].unsqueeze(1)
+        if self.use_linear_comb == 1:
+            lin = self.linear_comb[nodes.nodes()].unsqueeze(-1).unsqueeze(-1)
             out = (1 - lin) * msg + lin * hidden
         else:
             out = msg
