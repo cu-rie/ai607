@@ -33,8 +33,8 @@ class OurNetwork_GCN(nn.Module):
                              use_linear_comb=use_linear_comb))
         self.dropout = nn.Dropout(p=dropout)
         self.use_intermediate_embedding = use_intermediate_embedding
-        if use_intermediate_embedding == 1:
-            self.output_layer = nn.Linear(n_hidden, n_classes)
+
+        self.output_layer = nn.Linear(n_hidden, n_classes)
 
     def forward(self, graph, features):
         if self.use_intermediate_embedding == 1:
