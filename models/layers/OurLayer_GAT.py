@@ -45,6 +45,8 @@ class OurLayer_GAT(nn.Module):
 
     def forward(self, graph, feat):
         h = feat
+        if len(h.shape) == 3:
+            h = h.reshape(h.shape[0], -1)
         graph = graph.local_var()
         feat = self.fc(h).view(-1, self._num_heads, self._out_feats)
         el = (feat * self.attn_l).sum(dim=-1).unsqueeze(-1)

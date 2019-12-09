@@ -38,6 +38,8 @@ class OurNetwork_GAT(nn.Module):
         self.use_intermediate_embedding = use_intermediate_embedding
         if use_intermediate_embedding == 1:
             self.output_layer = nn.Linear(n_hidden * num_heads, n_classes)
+        else:
+            self.output_layer = nn.Linear(n_hidden * num_heads, n_classes)
 
     def forward(self, graph, features):
         if self.use_intermediate_embedding == 1:
@@ -70,7 +72,7 @@ class OurNetwork_GAT(nn.Module):
                 if i != 0:
                     h = self.dropout(h)
                 h = layer(graph, h)
-            out = self.output_layer(h)
+            out = self.output_layer(h.flatten(1))
         return out
 
 
